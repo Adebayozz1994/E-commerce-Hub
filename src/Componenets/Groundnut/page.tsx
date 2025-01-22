@@ -22,7 +22,10 @@ const Navbar = () => {
 
           {/* Navigation Menu */}
           <div className="hidden md:flex space-x-4">
-            <Link href="/">
+          <Link href="/user/mainpage">
+              <span className="text-white hover:underline">E-commerce Home</span>
+            </Link>
+            <Link href="/user/mainpage/groundnut">
               <span className="text-white hover:underline">Home</span>
             </Link>
             <Link href="/user/mainpage/groundnut/product">
@@ -64,7 +67,7 @@ const Navbar = () => {
         {/* Mobile Navigation */}
         {menuOpen && (
           <nav className="md:hidden bg-green-700 text-white flex flex-col items-center space-y-4 py-4">
-            <Link href="/">
+            <Link href="/user/mainpage/groundnut">
               <span
                 className="text-white hover:underline"
                 onClick={() => setMenuOpen(false)}
@@ -72,7 +75,7 @@ const Navbar = () => {
                 Home
               </span>
             </Link>
-            <Link href="/product">
+            <Link href="/user/mainpage/groundnut/product">
               <span
                 className="text-white hover:underline"
                 onClick={() => setMenuOpen(false)}
@@ -80,7 +83,7 @@ const Navbar = () => {
                 Products
               </span>
             </Link>
-            <Link href="/cart">
+            <Link href="/user/mainpage/groundnut/cartpage">
               <span
                 className="text-white hover:underline"
                 onClick={() => setMenuOpen(false)}
@@ -88,7 +91,7 @@ const Navbar = () => {
                 Cart
               </span>
             </Link>
-            <Link href="/about">
+            <Link href="/user/mainpage/groundnut/about">
               <span
                 className="text-white hover:underline"
                 onClick={() => setMenuOpen(false)}
@@ -103,25 +106,25 @@ const Navbar = () => {
       {/* Bottom Navbar with Icons */}
       <nav className="fixed bottom-0 left-0 w-full bg-green-600 text-white shadow-md">
         <div className="flex justify-around py-2">
-          <Link href="/">
+          <Link href="/user/mainpage/groundnut">
             <span className="text-white flex-1 text-center hover:bg-green-700 py-2">
               <i className="fas fa-home"></i>
               <span className="block text-sm">Home</span>
             </span>
           </Link>
-          <Link href="/product">
+          <Link href="/user/mainpage/groundnut/product">
             <span className="text-white flex-1 text-center hover:bg-green-700 py-2">
               <i className="fas fa-box"></i>
               <span className="block text-sm">Products</span>
             </span>
           </Link>
-          <Link href="/cart">
+          <Link href="/user/mainpage/groundnut/cartpage">
             <span className="text-white flex-1 text-center hover:bg-green-700 py-2">
               <i className="fas fa-shopping-cart"></i>
               <span className="block text-sm">Cart</span>
             </span>
           </Link>
-          <Link href="/about">
+          <Link href="/user/mainpage/groundnut/about">
             <span className="text-white flex-1 text-center hover:bg-green-700 py-2">
               <i className="fas fa-info-circle"></i>
               <span className="block text-sm">About</span>

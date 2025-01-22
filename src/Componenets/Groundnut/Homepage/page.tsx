@@ -1,6 +1,7 @@
 'use client';
 import Image from 'next/image';
 import Navbar from '../page';
+import Link from 'next/link';
 
 const HomePage = () => {
   // Testimonial data
@@ -36,9 +37,14 @@ const HomePage = () => {
             <p className="text-lg mb-6">
               Discover the finest selection of groundnuts. Order now and enjoy the taste of quality!
             </p>
+            {
+
+            <Link href="/user/mainpage/groundnut/product">
             <button className="bg-white text-green-600 font-semibold px-6 py-3 rounded shadow hover:bg-gray-100 transition transform hover:scale-105">
               Shop Now
             </button>
+            </Link>
+            }
           </div>
 
           <div className="mt-8 md:mt-0 md:w-1/3">
@@ -91,9 +97,13 @@ const HomePage = () => {
           <p className="text-lg mb-6">
             Place your order now and let us deliver the best groundnuts to your door.
           </p>
+          {
+            <Link href="/user/mainpage/groundnut/aboutus">
           <button className="bg-white text-green-600 font-semibold px-6 py-3 rounded shadow hover:bg-gray-100 transition transform hover:scale-105">
             Contact Us
           </button>
+            </Link>
+          }
         </div>
       </section>
 
