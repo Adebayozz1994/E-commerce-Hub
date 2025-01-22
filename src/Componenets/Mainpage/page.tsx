@@ -1,5 +1,5 @@
 'use client';
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import Link from "next/link";
 
 const MainPage: React.FC = () => {
@@ -11,10 +11,6 @@ const MainPage: React.FC = () => {
     { id: 3, name: "Grocery Store", description: "Shop for fresh groceries delivered to your door.", link: "/grocery" },
     { id: 4, name: "Home Decor", description: "Find beautiful furniture and decor for your home.", link: "/home-decor" },
   ];
-
-  useEffect(() => {
-    console.log("Hydration on the client is complete.");
-  }, []);
 
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
@@ -78,7 +74,6 @@ const MainPage: React.FC = () => {
           </div>
         </div>
 
-        {/* Mobile Menu */}
         {menuOpen && (
           <div className="md:hidden bg-gray-100">
             <ul className="flex flex-col items-center space-y-4 py-4">
@@ -108,7 +103,6 @@ const MainPage: React.FC = () => {
         )}
       </nav>
 
-      {/* Main Content */}
       <div className="flex flex-col items-center justify-center px-6 py-12">
         <h1 className="text-4xl md:text-6xl font-bold text-white text-center mb-12">
           Explore Our E-Commerce Sites
@@ -128,29 +122,28 @@ const MainPage: React.FC = () => {
         </div>
       </div>
 
-      {/* Bottom Navigation */}
       <nav className="fixed bottom-0 left-0 w-full bg-white shadow-lg">
-        <div className="flex justify-around py-2">
-          <Link href="/">
-            <div className="text-indigo-600 flex flex-col items-center hover:bg-gray-200 py-2 px-4">
-              <i className="fas fa-home"></i>
-              <span className="text-sm">Home</span>
-            </div>
-          </Link>
-          <Link href="/about">
-            <div className="text-indigo-600 flex flex-col items-center hover:bg-gray-200 py-2 px-4">
-              <i className="fas fa-info-circle"></i>
-              <span className="text-sm">About</span>
-            </div>
-          </Link>
-          <Link href="/contact">
-            <div className="text-indigo-600 flex flex-col items-center hover:bg-gray-200 py-2 px-4">
-              <i className="fas fa-phone"></i>
-              <span className="text-sm">Contact</span>
-            </div>
-          </Link>
-        </div>
-      </nav>
+  <div className="flex justify-around py-3">
+    <Link href="/">
+      <div className="text-indigo-600 flex flex-col items-center hover:bg-gray-200 py-2 px-4 rounded-md transition-all duration-300">
+        <i className="fas fa-home text-xl mb-1"></i>
+        <span className="text-sm">Home</span>
+      </div>
+    </Link>
+    <Link href="/about">
+      <div className="text-indigo-600 flex flex-col items-center hover:bg-gray-200 py-2 px-4 rounded-md transition-all duration-300">
+        <i className="fas fa-info-circle text-xl mb-1"></i>
+        <span className="text-sm">About</span>
+      </div>
+    </Link>
+    <Link href="/contact">
+      <div className="text-indigo-600 flex flex-col items-center hover:bg-gray-200 py-2 px-4 rounded-md transition-all duration-300">
+        <i className="fas fa-phone text-xl mb-1"></i>
+        <span className="text-sm">Contact</span>
+      </div>
+    </Link>
+  </div>
+</nav>
     </div>
   );
 };

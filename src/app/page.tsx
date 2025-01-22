@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import '@fortawesome/fontawesome-free/css/all.min.css';
 
 export default function LandingPage() {
   return (
