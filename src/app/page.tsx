@@ -9,10 +9,8 @@ export default function LandingPage() {
       <p className="text-lg md:text-xl text-white text-center max-w-2xl mb-10">
         Explore our diverse range of products across multiple e-commerce platforms. Click below to start your journey!
       </p>
-      <Link href="/main" className="px-6 py-3 bg-white text-indigo-500 font-semibold rounded-lg shadow-md hover:bg-indigo-100 transition">
-        
+      <Link href="user/mainpage" className="px-6 py-3 bg-white text-indigo-500 font-semibold rounded-lg shadow-md hover:bg-indigo-100 transition">
           Enter the Marketplace
-       
       </Link>
     </div>
   );
