@@ -1,8 +1,11 @@
+import CartPage from '@/Componenets/Groundnut/Cartpage/page'
 import React from 'react'
 
 const page = () => {
   return (
-    <div>page</div>
+    <div>
+      <CartPage/>
+    </div>
   )
 }
 

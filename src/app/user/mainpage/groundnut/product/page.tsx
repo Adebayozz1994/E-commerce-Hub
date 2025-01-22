@@ -1,8 +1,11 @@
+import Product from '@/Componenets/Groundnut/Products/page'
 import React from 'react'
 
 const page = () => {
   return (
-    <div>page</div>
+    <div>
+      <Product/>
+    </div>
   )
 }
 
