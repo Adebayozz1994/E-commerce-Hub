@@ -1,5 +1,5 @@
 'use client';
-import { useCart } from '@/Componenets/Groundnut/Cartcontext/page';
+import { useCart } from '@/Components/Groundnut/Cartcontext/page';
 
 const CartPage = () => {
   const { cartItems, updateQuantity, removeFromCart, getTotalPrice } = useCart();

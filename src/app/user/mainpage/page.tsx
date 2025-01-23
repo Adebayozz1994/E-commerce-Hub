@@ -1,5 +1,5 @@
 'use client';
-import MainPage from "@/Componenets/Mainpage/page";
+import MainPage from "@/Components/Mainpage/page";
 import React from "react";
 
 const Page: React.FC = () => {

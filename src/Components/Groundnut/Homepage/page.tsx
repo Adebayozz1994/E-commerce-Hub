@@ -39,7 +39,7 @@ const HomePage = () => {
             </p>
             {
 
-            <Link href="/user/mainpage/groundnut/product">
+            <Link href="/user/mainpage/natural-bites/product">
             <button className="bg-white text-green-600 font-semibold px-6 py-3 rounded shadow hover:bg-gray-100 transition transform hover:scale-105">
               Shop Now
             </button>
@@ -98,7 +98,7 @@ const HomePage = () => {
             Place your order now and let us deliver the best groundnuts to your door.
           </p>
           {
-            <Link href="/user/mainpage/groundnut/aboutus">
+            <Link href="/user/mainpage/natural-bites/aboutus">
           <button className="bg-white text-green-600 font-semibold px-6 py-3 rounded shadow hover:bg-gray-100 transition transform hover:scale-105">
             Contact Us
           </button>

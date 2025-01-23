@@ -1,4 +1,5 @@
-import CartPage from '@/Componenets/Groundnut/Cartpage/page'
+
+import CartPage from '@/Components/Groundnut/Cartpage/page'
 import React from 'react'
 
 const page = () => {

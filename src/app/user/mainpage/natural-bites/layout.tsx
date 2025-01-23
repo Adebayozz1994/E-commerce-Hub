@@ -1,4 +1,4 @@
-import { CartProvider } from '@/Componenets/Groundnut/Cartcontext/page';
+import { CartProvider } from '@/Components/Groundnut/Cartcontext/page';
 import { ReactNode } from 'react';
 
 export default function RootLayout({ children }: { children: ReactNode }) {

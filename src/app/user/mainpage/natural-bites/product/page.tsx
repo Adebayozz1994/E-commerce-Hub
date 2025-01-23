@@ -1,4 +1,5 @@
-import Product from '@/Componenets/Groundnut/Products/page'
+
+import Product from '@/Components/Groundnut/Products/page'
 import React from 'react'
 
 const page = () => {

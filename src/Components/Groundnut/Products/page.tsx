@@ -1,5 +1,5 @@
 'use client';
-import { useCart } from '@/Componenets/Groundnut/Cartcontext/page';
+import { useCart } from '@/Components/Groundnut/Cartcontext/page';
 import Image from 'next/image';
 import Link from 'next/link';
 
@@ -28,16 +28,19 @@ const products = [
 ];
 
 const Product = () => {
-  const { addToCart } = useCart();
+  const { addToCart, cartItems } = useCart();
+
+  // Calculate total quantity of items in the cart
+  const totalItems = cartItems.reduce((sum, item) => sum + item.quantity, 0);
 
   return (
     <>
       <header className="bg-green-600 text-white py-4 shadow-md">
         <div className="container mx-auto flex justify-between items-center px-4">
           <h1 className="text-2xl font-bold">Our Products</h1>
-          <Link href="/user/mainpage/groundnut/cartpage">
+          <Link href="/user/mainpage/natural-bites/cartpage">
             <button className="bg-white text-green-600 px-4 py-2 rounded shadow hover:bg-gray-100">
-              View Cart
+              View Cart {totalItems > 0 && `(${totalItems})`}
             </button>
           </Link>
         </div>
