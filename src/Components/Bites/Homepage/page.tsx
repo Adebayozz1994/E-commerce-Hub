@@ -38,7 +38,7 @@ const HomePage = () => {
               Discover the finest selection of groundnuts. Order now and enjoy the taste of quality!
             </p>
             {
-              <Link href="/user/mainpage/oraj-edibles/product">
+              <Link href="/user/mainpage/oraj-edibles/products">
                 <button className="bg-white text-blue-600 font-semibold px-6 py-3 rounded shadow hover:bg-gray-100 transition transform hover:scale-105">
                   Shop Now
                 </button>
@@ -98,7 +98,7 @@ const HomePage = () => {
           </p>
           {
             <Link href="/user/mainpage/oraj-edibles/aboutus">
-              <button className="bg-black text-blue-600 font-semibold px-6 py-3 rounded shadow hover:bg-blue-600 transition transform hover:scale-105">
+              <button className="bg-white text-blue-600 font-semibold px-6 py-3 rounded shadow hover:bg-white transition transform hover:scale-105">
                 Contact Us
               </button>
             </Link>

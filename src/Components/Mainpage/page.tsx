@@ -8,7 +8,7 @@ const MainPage: React.FC = () => {
   const ecomSites = [
     { id: 1, name: "Natural-Bites Store", description: "Explore the beautifull and healthy Groundnut", link: "mainpage/natural-bites" },
     { id: 2, name: "ORAJ Edibbles", description: "Your trusted brand for quality and hygenic food items.", link: "mainpage/oraj-edibles" },
-    { id: 3, name: "Grocery Store", description: "Shop for fresh groceries delivered to your door.", link: "/grocery" },
+    { id: 3, name: "Opeyemi Couture", description: "Get the best style with us in fashion and tailoring material.", link: "mainpage/opeyemi-couture" },
     { id: 4, name: "Home Decor", description: "Find beautiful furniture and decor for your home.", link: "/home-decor" },
   ];
 
