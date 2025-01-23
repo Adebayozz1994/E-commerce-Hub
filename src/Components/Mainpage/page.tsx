@@ -9,7 +9,6 @@ const MainPage: React.FC = () => {
     { id: 1, name: "Natural-Bites Store", description: "Explore the beautifull and healthy Groundnut", link: "mainpage/natural-bites" },
     { id: 2, name: "ORAJ Edibbles", description: "Your trusted brand for quality and hygenic food items.", link: "mainpage/oraj-edibles" },
     { id: 3, name: "Opeyemi Couture", description: "Get the best style with us in fashion and tailoring material.", link: "mainpage/opeyemi-couture" },
-    { id: 4, name: "Home Decor", description: "Find beautiful furniture and decor for your home.", link: "/home-decor" },
   ];
 
   const toggleMenu = () => {
@@ -34,14 +33,14 @@ const MainPage: React.FC = () => {
               </Link>
             </li>
             <li>
-              <Link href="/about">
+              <Link href="/">
                 <div className="text-gray-700 font-semibold hover:text-indigo-600 cursor-pointer text-lg">
                   About
                 </div>
               </Link>
             </li>
             <li>
-              <Link href="/contact">
+              <Link href="/">
                 <div className="text-gray-700 font-semibold hover:text-indigo-600 cursor-pointer text-lg">
                   Contact
                 </div>
@@ -85,14 +84,14 @@ const MainPage: React.FC = () => {
                 </Link>
               </li>
               <li>
-                <Link href="/about">
+                <Link href="/">
                   <div onClick={toggleMenu} className="text-gray-700 font-semibold hover:text-indigo-600 cursor-pointer text-lg">
                     About
                   </div>
                 </Link>
               </li>
               <li>
-                <Link href="/contact">
+                <Link href="/">
                   <div onClick={toggleMenu} className="text-gray-700 font-semibold hover:text-indigo-600 cursor-pointer text-lg">
                     Contact
                   </div>
@@ -130,13 +129,13 @@ const MainPage: React.FC = () => {
         <span className="text-sm">Home</span>
       </div>
     </Link>
-    <Link href="/about">
+    <Link href="/">
       <div className="text-indigo-600 flex flex-col items-center hover:bg-gray-200 py-2 px-4 rounded-md transition-all duration-300">
         <i className="fas fa-info-circle text-xl mb-1"></i>
         <span className="text-sm">About</span>
       </div>
     </Link>
-    <Link href="/contact">
+    <Link href="/">
       <div className="text-indigo-600 flex flex-col items-center hover:bg-gray-200 py-2 px-4 rounded-md transition-all duration-300">
         <i className="fas fa-phone text-xl mb-1"></i>
         <span className="text-sm">Contact</span>
