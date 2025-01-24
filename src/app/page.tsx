@@ -5,18 +5,12 @@ import { motion } from "framer-motion";
 
 export default function LandingPage() {
   return (
-    <motion.div
-      className="min-h-screen flex flex-col items-center justify-center bg-gradient-to-br from-purple-500 to-indigo-500"
-      initial={{ opacity: 0, scale: 0.9 }}
-      animate={{ opacity: 1, scale: 1 }}
-      exit={{ opacity: 0, scale: 0.9 }}
-      transition={{ duration: 1, ease: "easeInOut" }} // Slower background animation
-    >
+    <div className="min-h-screen flex flex-col items-center justify-center bg-gradient-to-br from-purple-500 to-indigo-500">
       <motion.h1
         className="text-4xl md:text-6xl font-bold text-white mb-8 text-center"
         initial={{ y: -50, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
-        transition={{ duration: 0.8, ease: "easeOut" }} // Slower and smoother
+        transition={{ duration: 0.6, ease: "easeOut" }} 
       >
         Welcome to E-Commerce Hub
       </motion.h1>
@@ -25,7 +19,7 @@ export default function LandingPage() {
         className="text-lg md:text-xl text-white text-center max-w-2xl mb-10"
         initial={{ y: 50, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
-        transition={{ duration: 1, delay: 0.8, ease: "easeOut" }} // Starts after heading
+        transition={{ duration: 1, delay: 0.8, ease: "easeOut" }} 
       >
         Explore our diverse range of products across multiple e-commerce platforms. Click below to start your journey!
       </motion.p>
@@ -33,7 +27,7 @@ export default function LandingPage() {
       <motion.div
         initial={{ opacity: 0, scale: 0.8 }}
         animate={{ opacity: 1, scale: 1 }}
-        transition={{ duration: 1, delay: 1.8, ease: "easeOut" }} // Starts after paragraph
+        transition={{ duration: 1, delay: 1.8, ease: "easeOut" }}
       >
         <Link
           href="user/mainpage"
@@ -42,6 +36,6 @@ export default function LandingPage() {
           Enter the Marketplace
         </Link>
       </motion.div>
-    </motion.div>
+    </div>
   );
 }
