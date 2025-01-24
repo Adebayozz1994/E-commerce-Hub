@@ -1,9 +1,18 @@
 import React from 'react'
+import Image from 'next/image';
 
-const page = () => {
+const About = () => {
   return (
-    <div>page</div>
+    <div>
+        <Image
+        src="/images/back.png"
+        alt="Example Image"
+        width={500} 
+        height={300}
+        priority 
+      />
+    </div>
   )
 }
 
-export default page
+export default About
