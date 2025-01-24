@@ -104,34 +104,34 @@ const Navbar = () => {
       </header>
 
       {/* Bottom Navbar with Icons */}
-      <nav className="fixed bottom-0 left-0 w-full bg-green-600 text-white shadow-md">
-        <div className="flex justify-around py-2">
-          <Link href="/user/mainpage/natural-bites">
-            <span className="text-white flex-1 text-center hover:bg-green-700 py-2">
-              <i className="fas fa-home"></i>
-              <span className="block text-sm">Home</span>
-            </span>
-          </Link>
-          <Link href="/user/mainpage/natural-bites/product">
-            <span className="text-white flex-1 text-center hover:bg-green-700 py-2">
-              <i className="fas fa-box"></i>
-              <span className="block text-sm">Products</span>
-            </span>
-          </Link>
-          <Link href="/user/mainpage/natural-bites/cartpage">
-            <span className="text-white flex-1 text-center hover:bg-green-700 py-2">
-              <i className="fas fa-shopping-cart"></i>
-              <span className="block text-sm">Cart</span>
-            </span>
-          </Link>
-          <Link href="/user/mainpage/natural-bites/about">
-            <span className="text-white flex-1 text-center hover:bg-green-700 py-2">
-              <i className="fas fa-info-circle"></i>
-              <span className="block text-sm">About</span>
-            </span>
-          </Link>
-        </div>
-      </nav>
+<nav className="fixed bottom-0 left-0 w-full bg-green-600 text-white shadow-md z-50">
+  <div className="flex justify-around items-center h-16">
+    <Link href="/user/mainpage/natural-bites">
+      <span className="text-white flex flex-col items-center hover:bg-green-700 py-2 px-4">
+        <i className="fas fa-home text-lg"></i>
+        <span className="block text-sm">Home</span>
+      </span>
+    </Link>
+    <Link href="/user/mainpage/natural-bites/products">
+      <span className="text-white flex flex-col items-center hover:bg-green-700 py-2 px-4">
+        <i className="fas fa-box text-lg"></i>
+        <span className="block text-sm">Products</span>
+      </span>
+    </Link>
+    <Link href="/user/mainpage/natural-bites/cartpage">
+      <span className="text-white flex flex-col items-center hover:bg-green-700 py-2 px-4">
+        <i className="fas fa-shopping-cart text-lg"></i>
+        <span className="block text-sm">Cart</span>
+      </span>
+    </Link>
+    <Link href="/user/mainpage/natural-bites/about">
+      <span className="text-white flex flex-col items-center hover:bg-green-700 py-2 px-4">
+        <i className="fas fa-info-circle text-lg"></i>
+        <span className="block text-sm">About</span>
+      </span>
+    </Link>
+  </div>
+</nav>
     </div>
   );
 };
