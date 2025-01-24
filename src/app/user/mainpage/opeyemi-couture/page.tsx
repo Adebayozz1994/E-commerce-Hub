@@ -43,7 +43,7 @@ export default function Home() {
           <div>
             <h2 className="text-3xl font-bold mb-4">Meet the Designer</h2>
             <p className="text-lg">
-              I’m [Designer Name], a passionate fashion designer specializing in creating bespoke designs that tell a
+              I’m Ogunlade Opeyemi, a passionate fashion designer specializing in creating bespoke designs that tell a
               story. With a keen eye for detail and a love for elegance, I aim to bring out the best in every piece of
               fabric.
             </p>
@@ -129,7 +129,7 @@ export default function Home() {
       {/* Footer */}
       <footer className="bg-gray-800 text-white py-6">
         <div className="container mx-auto text-center">
-          <p>&copy; {new Date().getFullYear()} [Opeyemi Couture]. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} Opeyemi Couture. All rights reserved.</p>
         </div>
       </footer>
     </div>
