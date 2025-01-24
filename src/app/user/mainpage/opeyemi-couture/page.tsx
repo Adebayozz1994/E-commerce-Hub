@@ -1,34 +1,51 @@
 'use client';
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Image from 'next/image';
 import Link from 'next/link';
 
 export default function Home() {
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [loading, setLoading] = useState(true);
 
   // Toggle modal
   const toggleModal = () => setIsModalOpen(!isModalOpen);
 
+  // Simulate loading effect
+  useEffect(() => {
+    setTimeout(() => {
+      setLoading(false);
+    }, 3000); // Adjust time based on your content loading time
+  }, []);
+
   return (
     <div className="bg-gray-50 text-gray-800">
-      {/* Hero Section */}
-      <header
-        className="relative bg-cover bg-center h-screen"
-        style={{
-          backgroundImage: `url('https://img.freepik.com/free-photo/digital-art-style-illustration-fashion-designer_23-2151537701.jpg?semt=ais_hybrid')`,
-        }}
-      >
-        <div className="absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-center items-center text-center text-white">
-          <h1 className="text-4xl md:text-6xl font-bold mb-4">Crafting Dreams into Reality</h1>
-          <p className="text-lg md:text-2xl">Custom Designs | Premium Fabrics | Timeless Elegance</p>
-          <Link href="#portfolio">
-            <button className="mt-6 px-6 py-3 bg-blue-600 text-white rounded-lg shadow-md hover:bg-blue-700 transition">
-              Explore Portfolio
-            </button>
-          </Link>
+      {/* Loader */}
+      {loading && (
+        <div className="flex justify-center items-center h-screen bg-white">
+          <div className="loader2"></div>
         </div>
-      </header>
+      )}
+
+      {/* Hero Section */}
+      {!loading && (
+        <header
+          className="relative bg-cover bg-center h-screen"
+          style={{
+            backgroundImage: `url('https://img.freepik.com/free-photo/digital-art-style-illustration-fashion-designer_23-2151537701.jpg?semt=ais_hybrid')`,
+          }}
+        >
+          <div className="absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-center items-center text-center text-white">
+            <h1 className="text-4xl md:text-6xl font-bold mb-4">Crafting Dreams into Reality</h1>
+            <p className="text-lg md:text-2xl">Custom Designs | Premium Fabrics | Timeless Elegance</p>
+            <Link href="#portfolio">
+              <button className="mt-6 px-6 py-3 bg-blue-600 text-white rounded-lg shadow-md hover:bg-blue-700 transition">
+                Explore Portfolio
+              </button>
+            </Link>
+          </div>
+        </header>
+      )}
 
       {/* About Section */}
       <section className="py-16 bg-white">

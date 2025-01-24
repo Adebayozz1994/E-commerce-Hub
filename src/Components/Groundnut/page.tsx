@@ -1,14 +1,35 @@
 "use client";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Link from "next/link";
+import Groundnut from "../Groundnut/Groundnut.module.css"
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState<boolean>(false);
+  const [loading, setLoading] = useState<boolean>(true);
 
   // Toggle the mobile menu
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
   };
+
+
+    // Simulate loading state
+    useEffect(() => {
+      const timer = setTimeout(() => {
+        setLoading(false); // Set loading to false after 2 seconds (simulate data fetching)
+      }, 2000); // Adjust time as needed
+  
+      return () => clearTimeout(timer); // Cleanup on component unmount
+    }, []);
+  
+    if (loading) {
+      return (
+        <div className="flex items-center justify-center min-h-screen">
+          {/* Custom loader */}
+          <div className={Groundnut.loader4}></div>
+        </div>
+      );
+    }
 
   return (
     <div>

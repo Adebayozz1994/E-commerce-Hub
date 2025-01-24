@@ -1,14 +1,35 @@
-"use client";
-import { useState } from "react";
+'use client';
+import { useState, useEffect } from "react";
 import Link from "next/link";
+import Style  from "../Bites/Bites.module.css";
+
 
 const Bites = () => {
   const [menuOpen, setMenuOpen] = useState<boolean>(false);
+  const [loading, setLoading] = useState<boolean>(true); // State to handle loading
 
   // Toggle the mobile menu
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
   };
+
+  // Simulate loading state
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setLoading(false); // Set loading to false after 2 seconds (simulate data fetching)
+    }, 2000); // Adjust time as needed
+
+    return () => clearTimeout(timer); // Cleanup on component unmount
+  }, []);
+
+  if (loading) {
+    return (
+      <div className="flex items-center justify-center min-h-screen">
+        {/* Custom loader */}
+        <div className={Style.loader3}></div>
+      </div>
+    );
+  }
 
   return (
     <div>
@@ -103,35 +124,35 @@ const Bites = () => {
         )}
       </header>
 
-   {/* Bottom Navbar with Icons */}
-<nav className="fixed bottom-0 left-0 w-full bg-blue-600 text-white shadow-md z-50">
-  <div className="flex justify-around items-center h-16">
-    <Link href="/user/mainpage/oraj-edibles">
-      <span className="text-white flex flex-col items-center hover:bg-blue-700 py-2 px-4">
-        <i className="fas fa-home text-lg"></i>
-        <span className="block text-sm">Home</span>
-      </span>
-    </Link>
-    <Link href="/user/mainpage/oraj-edibles/products">
-      <span className="text-white flex flex-col items-center hover:bg-blue-700 py-2 px-4">
-        <i className="fas fa-box text-lg"></i>
-        <span className="block text-sm">Products</span>
-      </span>
-    </Link>
-    <Link href="/user/mainpage/oraj-edibles/cartpage">
-      <span className="text-white flex flex-col items-center hover:bg-blue-700 py-2 px-4">
-        <i className="fas fa-shopping-cart text-lg"></i>
-        <span className="block text-sm">Cart</span>
-      </span>
-    </Link>
-    <Link href="/user/mainpage/oraj-edibles/about">
-      <span className="text-white flex flex-col items-center hover:bg-blue-700 py-2 px-4">
-        <i className="fas fa-info-circle text-lg"></i>
-        <span className="block text-sm">About</span>
-      </span>
-    </Link>
-  </div>
-</nav>
+      {/* Bottom Navbar with Icons */}
+      <nav className="fixed bottom-0 left-0 w-full bg-blue-600 text-white shadow-md z-50">
+        <div className="flex justify-around items-center h-16">
+          <Link href="/user/mainpage/oraj-edibles">
+            <span className="text-white flex flex-col items-center hover:bg-blue-700 py-2 px-4">
+              <i className="fas fa-home text-lg"></i>
+              <span className="block text-sm">Home</span>
+            </span>
+          </Link>
+          <Link href="/user/mainpage/oraj-edibles/products">
+            <span className="text-white flex flex-col items-center hover:bg-blue-700 py-2 px-4">
+              <i className="fas fa-box text-lg"></i>
+              <span className="block text-sm">Products</span>
+            </span>
+          </Link>
+          <Link href="/user/mainpage/oraj-edibles/cartpage">
+            <span className="text-white flex flex-col items-center hover:bg-blue-700 py-2 px-4">
+              <i className="fas fa-shopping-cart text-lg"></i>
+              <span className="block text-sm">Cart</span>
+            </span>
+          </Link>
+          <Link href="/user/mainpage/oraj-edibles/about">
+            <span className="text-white flex flex-col items-center hover:bg-blue-700 py-2 px-4">
+              <i className="fas fa-info-circle text-lg"></i>
+              <span className="block text-sm">About</span>
+            </span>
+          </Link>
+        </div>
+      </nav>
     </div>
   );
 };
