@@ -1,6 +1,7 @@
 'use client';
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
+import { motion } from "framer-motion"; // Import motion for animations
 
 const MainPage: React.FC = () => {
   const [isLoading, setIsLoading] = useState(true); // State to manage loader visibility
@@ -36,7 +37,12 @@ const MainPage: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-b from-indigo-500 via-purple-600 to-pink-500">
       {/* Navbar */}
-      <nav className="bg-white shadow-lg">
+      <motion.nav
+        className="bg-white shadow-lg"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 1 }}
+      >
         <div className="container mx-auto flex items-center justify-between px-8 py-6">
           {/* Brand */}
           <h1 className="text-3xl font-bold text-indigo-600">E-Commerce Hub</h1>
@@ -118,28 +124,44 @@ const MainPage: React.FC = () => {
             </ul>
           </div>
         )}
-      </nav>
+      </motion.nav>
 
       <div className="flex flex-col items-center justify-center px-6 py-12 mb-16">
-        <h1 className="text-4xl md:text-6xl font-bold text-white text-center mb-12">
+        <motion.h1
+          className="text-4xl md:text-6xl font-bold text-white text-center mb-12"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.5, duration: 1 }}
+        >
           Explore Our E-Commerce Sites
-        </h1>
+        </motion.h1>
+
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 max-w-7xl w-full">
           {ecomSites.map((site) => (
             <Link href={site.link} key={site.id}>
-              <div className="bg-white rounded-lg p-8 flex flex-col items-center justify-between shadow-inner hover:scale-105 transform transition duration-300 ease-in-out cursor-pointer h-72">
+              <motion.div
+                className="bg-white rounded-lg p-8 flex flex-col items-center justify-between shadow-inner hover:scale-105 transform transition duration-300 ease-in-out cursor-pointer h-72"
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.5, duration: 1 }}
+              >
                 <h2 className="text-3xl font-bold text-indigo-600 mb-4">{site.name}</h2>
                 <p className="text-gray-600 text-center mb-6 text-lg">{site.description}</p>
                 <div className="px-6 py-3 bg-indigo-500 text-white font-semibold rounded-lg shadow-md hover:bg-indigo-600 transition">
                   Visit {site.name}
                 </div>
-              </div>
+              </motion.div>
             </Link>
           ))}
         </div>
       </div>
 
-      <nav className="fixed bottom-0 left-0 w-full bg-white shadow-lg">
+      <motion.nav
+        className="fixed bottom-0 left-0 w-full bg-white shadow-lg"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 1.5, duration: 1 }}
+      >
         <div className="flex justify-around py-3">
           <Link href="/">
             <div className="text-indigo-600 flex flex-col items-center hover:bg-gray-200 py-2 px-4 rounded-md transition-all duration-300">
@@ -160,7 +182,7 @@ const MainPage: React.FC = () => {
             </div>
           </Link>
         </div>
-      </nav>
+      </motion.nav>
     </div>
   );
 };
