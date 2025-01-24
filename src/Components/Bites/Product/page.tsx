@@ -37,16 +37,17 @@ const Product = () => {
 
   return (
     <>
-      <header className="bg-blue-600 text-white py-4 shadow-md">
-        <div className="container mx-auto flex justify-between items-center px-4">
-          <h1 className="text-2xl font-bold">Oraj-Edibles</h1>
-          <Link href="/user/mainpage/oraj-edibles/cartpage">
-            <button className="bg-white text-blue-600 px-4 py-2 rounded shadow hover:bg-gray-100">
-              View Cart {totalItems > 0 && `(${totalItems})`}
-            </button>
-          </Link>
-        </div>
-      </header>
+   <header className="bg-blue-600 text-white py-4 shadow-md sticky top-0 z-50">
+  <div className="container mx-auto flex justify-between items-center px-4">
+    <h1 className="text-2xl font-bold">Oraj-Edibles</h1>
+    <Link href="/user/mainpage/oraj-edibles/cartpage">
+      <button className="bg-white text-blue-600 px-4 py-2 rounded shadow hover:bg-gray-100">
+        View Cart {totalItems > 0 && `(${totalItems})`}
+      </button>
+    </Link>
+  </div>
+</header>
+
 
       <section className="py-16 bg-gray-100 mb-11">
         <div className="container mx-auto">

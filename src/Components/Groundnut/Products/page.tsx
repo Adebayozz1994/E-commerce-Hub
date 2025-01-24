@@ -37,7 +37,7 @@ const Product = () => {
 
   return (
     <>
-      <header className="bg-green-600 text-white py-4 shadow-md">
+      <header className="bg-green-600 text-white py-4 shadow-md sticky top-0 z-50">
         <div className="container mx-auto flex justify-between items-center px-4">
           <h1 className="text-2xl font-bold">Our Products</h1>
           <Link href="/user/mainpage/natural-bites/cartpage">
