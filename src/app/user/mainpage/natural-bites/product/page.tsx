@@ -1,4 +1,4 @@
-
+'use client';
 import Product from '@/Components/Groundnut/Products/page'
 import React from 'react'
 

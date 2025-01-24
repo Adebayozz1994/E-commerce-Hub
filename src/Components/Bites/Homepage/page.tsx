@@ -97,7 +97,7 @@ const HomePage = () => {
             Place your order now and let us deliver the best groundnuts to your door.
           </p>
           {
-            <Link href="/user/mainpage/oraj-edibles/aboutus">
+            <Link href="/user/mainpage/oraj-edibles/contact">
               <button className="bg-white text-blue-600 font-semibold px-6 py-3 rounded shadow hover:bg-white transition transform hover:scale-105">
                 Contact Us
               </button>

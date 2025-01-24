@@ -1,3 +1,4 @@
+'use client';
 import CartPage from '@/Components/Bites/Cartpage/page'
 import React from 'react'
 

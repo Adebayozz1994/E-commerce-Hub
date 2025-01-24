@@ -1,3 +1,4 @@
+'use client';
 import Link from 'next/link';
 import '@fortawesome/fontawesome-free/css/all.min.css';
 

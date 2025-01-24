@@ -1,3 +1,4 @@
+'use client';
 import Product from '@/Components/Bites/Product/page'
 import React from 'react'
 
