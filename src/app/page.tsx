@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import '@fortawesome/fontawesome-free/css/all.min.css';
 
+
 export default function LandingPage() {
   return (
     <div className="min-h-screen flex flex-col items-center justify-center bg-gradient-to-br from-purple-500 to-indigo-500">
