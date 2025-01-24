@@ -33,7 +33,7 @@ const HomePage = () => {
       <section className="bg-green-600 text-white py-20 relative overflow-hidden">
         <div className="container mx-auto flex flex-col md:flex-row items-center">
           <div className="text-center md:text-left md:w-1/2 ml-5">
-            <h1 className="text-4xl font-bold mb-4">Welcome to Natural Bites Store</h1>
+            <h1 className="text-4xl font-bold mb-4">Welcome to The NUTural Bites</h1>
             <p className="text-lg mb-6">
               Discover the finest selection of groundnuts. Order now and enjoy the taste of quality!
             </p>
