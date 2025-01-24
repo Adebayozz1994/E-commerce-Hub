@@ -22,6 +22,8 @@ body {
 }
 
 
+/* Global loader style */
+
 .loader {
   width: fit-content;
   font-weight: bold;
@@ -29,14 +31,15 @@ body {
   font-size: 30px;
   clip-path: inset(0 100% 0 0);
   animation: l5 2s steps(11) infinite;
+  display: inline-block;
 }
 
-.loader:before {
-  content: "E-commerce Hub...";
+/* Dynamically set the text using the data attribute */
+.loader::before {
+  content: attr(data-loader-text);  /* Get text dynamically from the data attribute */
   font-size: 40px;
-  font-family: 'Arial', sans-serif; 
-  color: #4a90e2;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); 
+  font-family: 'Arial', sans-serif;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 @keyframes l5 {
@@ -44,4 +47,7 @@ body {
     clip-path: inset(0 -1ch 0 0);
   }
 }
+
+
+
 
