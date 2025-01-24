@@ -86,12 +86,12 @@ const Navbar = () => {
         {/* Mobile Navigation */}
         {menuOpen && (
           <nav className="md:hidden bg-green-700 text-white flex flex-col items-center space-y-4 py-4">
-            <Link href="/user/mainpage/natural-bites">
+            <Link href="/user/mainpage/">
               <span
                 className="text-white hover:underline"
                 onClick={() => setMenuOpen(false)}
               >
-                Home
+                E-commerce Home
               </span>
             </Link>
             <Link href="/user/mainpage/natural-bites/product">
@@ -110,6 +110,14 @@ const Navbar = () => {
                 Cart
               </span>
             </Link>
+            <Link href="/user/mainpage/natural-bites/about">
+              <span
+                className="text-white hover:underline"
+                onClick={() => setMenuOpen(false)}
+              >
+                About
+              </span>
+            </Link>
           </nav>
         )}
       </header>
@@ -117,10 +125,10 @@ const Navbar = () => {
       {/* Bottom Navbar with Icons */}
       <nav className="fixed bottom-0 left-0 w-full bg-green-600 text-white shadow-md z-50">
         <div className="flex justify-around items-center h-16">
-          <Link href="/user/mainpage/natural-bites">
+          <Link href="/user/mainpage">
             <span className="text-white flex flex-col items-center hover:bg-green-700 py-2 px-4">
               <i className="fas fa-home text-lg"></i>
-              <span className="block text-sm">Home</span>
+              <span className="block text-sm">E-commerce Home</span>
             </span>
           </Link>
           <Link href="/user/mainpage/natural-bites/product">
