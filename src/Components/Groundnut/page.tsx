@@ -17,7 +17,7 @@ const Navbar = () => {
         <div className="container mx-auto flex justify-between items-center px-4">
           {/* Brand Name */}
           <Link href="/" passHref>
-            <h1 className="text-2xl sm:text-xl font-bold">Groundnut Store</h1>
+            <h1 className="text-2xl sm:text-xl font-bold">Natural Bites</h1>
           </Link>
 
           {/* Navigation Menu */}
