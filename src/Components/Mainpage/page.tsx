@@ -51,14 +51,14 @@ const MainPage: React.FC = () => {
               </Link>
             </li>
             <li>
-              <Link href="/">
+              <Link href="mainpage/about">
                 <div className="text-gray-700 font-semibold hover:text-indigo-600 cursor-pointer text-lg">
                   About
                 </div>
               </Link>
             </li>
             <li>
-              <Link href="/">
+              <Link href="mainpage/contact">
                 <div className="text-gray-700 font-semibold hover:text-indigo-600 cursor-pointer text-lg">
                   Contact
                 </div>
@@ -102,14 +102,14 @@ const MainPage: React.FC = () => {
                 </Link>
               </li>
               <li>
-                <Link href="/">
+                <Link href="mainpage/about">
                   <div onClick={toggleMenu} className="text-gray-700 font-semibold hover:text-indigo-600 cursor-pointer text-lg">
                     About
                   </div>
                 </Link>
               </li>
               <li>
-                <Link href="/">
+                <Link href="mainpage/contact">
                   <div onClick={toggleMenu} className="text-gray-700 font-semibold hover:text-indigo-600 cursor-pointer text-lg">
                     Contact
                   </div>
@@ -147,13 +147,13 @@ const MainPage: React.FC = () => {
               <span className="text-sm">Home</span>
             </div>
           </Link>
-          <Link href="/">
+          <Link href="mainpage/about">
             <div className="text-indigo-600 flex flex-col items-center hover:bg-gray-200 py-2 px-4 rounded-md transition-all duration-300">
               <i className="fas fa-info-circle text-xl mb-1"></i>
               <span className="text-sm">About</span>
             </div>
           </Link>
-          <Link href="/">
+          <Link href="mainpage/contact">
             <div className="text-indigo-600 flex flex-col items-center hover:bg-gray-200 py-2 px-4 rounded-md transition-all duration-300">
               <i className="fas fa-phone text-xl mb-1"></i>
               <span className="text-sm">Contact</span>
