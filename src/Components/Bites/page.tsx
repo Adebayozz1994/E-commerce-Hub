@@ -1,12 +1,13 @@
 'use client';
 import { useState, useEffect } from "react";
 import Link from "next/link";
-import Style  from "../Bites/Bites.module.css";
-
+import { useRouter } from "next/navigation"; // Import useRouter
+import Style from "../Bites/Bites.module.css";
 
 const Bites = () => {
   const [menuOpen, setMenuOpen] = useState<boolean>(false);
   const [loading, setLoading] = useState<boolean>(true); // State to handle loading
+  const router = useRouter(); // Initialize useRouter
 
   // Toggle the mobile menu
   const toggleMenu = () => {
@@ -58,6 +59,7 @@ const Bites = () => {
             <Link href="/user/mainpage/oraj-edibles/about">
               <span className="text-white hover:underline">About</span>
             </Link>
+         
           </div>
 
           {/* Hamburger Menu for Small Screens */}
@@ -112,14 +114,15 @@ const Bites = () => {
                 Cart
               </span>
             </Link>
-            <Link href="/user/mainpage/oraj-edibles/about">
-              <span
-                className="text-white hover:underline"
-                onClick={() => setMenuOpen(false)}
-              >
-                About
-              </span>
-            </Link>
+            <button
+              className="text-white hover:underline"
+              onClick={() => {
+                setMenuOpen(false);
+                router.back(); // Go back to the previous page
+              }}
+            >
+              Back
+            </button>
           </nav>
         )}
       </header>
@@ -145,12 +148,13 @@ const Bites = () => {
               <span className="block text-sm">Cart</span>
             </span>
           </Link>
-          <Link href="/user/mainpage/oraj-edibles/about">
-            <span className="text-white flex flex-col items-center hover:bg-blue-700 py-2 px-4">
-              <i className="fas fa-info-circle text-lg"></i>
-              <span className="block text-sm">About</span>
-            </span>
-          </Link>
+          <button
+            className="text-white flex flex-col items-center hover:bg-blue-700 py-2 px-4"
+            onClick={() => router.back()} // Go back to the previous page
+          >
+            <i className="fas fa-arrow-left text-lg"></i>
+            <span className="block text-sm">Back</span>
+          </button>
         </div>
       </nav>
     </div>

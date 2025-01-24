@@ -1,35 +1,36 @@
 "use client";
 import { useEffect, useState } from "react";
 import Link from "next/link";
-import Groundnut from "../Groundnut/Groundnut.module.css"
+import { useRouter } from "next/navigation"; // Import useRouter
+import Groundnut from "../Groundnut/Groundnut.module.css";
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState<boolean>(false);
   const [loading, setLoading] = useState<boolean>(true);
+  const router = useRouter(); // Initialize the router
 
   // Toggle the mobile menu
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
   };
 
+  // Simulate loading state
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setLoading(false); // Set loading to false after 2 seconds (simulate data fetching)
+    }, 2000); // Adjust time as needed
 
-    // Simulate loading state
-    useEffect(() => {
-      const timer = setTimeout(() => {
-        setLoading(false); // Set loading to false after 2 seconds (simulate data fetching)
-      }, 2000); // Adjust time as needed
-  
-      return () => clearTimeout(timer); // Cleanup on component unmount
-    }, []);
-  
-    if (loading) {
-      return (
-        <div className="flex items-center justify-center min-h-screen">
-          {/* Custom loader */}
-          <div className={Groundnut.loader4}></div>
-        </div>
-      );
-    }
+    return () => clearTimeout(timer); // Cleanup on component unmount
+  }, []);
+
+  if (loading) {
+    return (
+      <div className="flex items-center justify-center min-h-screen">
+        {/* Custom loader */}
+        <div className={Groundnut.loader4}></div>
+      </div>
+    );
+  }
 
   return (
     <div>
@@ -43,7 +44,7 @@ const Navbar = () => {
 
           {/* Navigation Menu */}
           <div className="hidden md:flex space-x-4">
-          <Link href="/user/mainpage">
+            <Link href="/user/mainpage">
               <span className="text-white hover:underline">E-commerce Home</span>
             </Link>
             <Link href="/user/mainpage/natural-bites">
@@ -54,9 +55,6 @@ const Navbar = () => {
             </Link>
             <Link href="/user/mainpage/natural-bites/cartpage">
               <span className="text-white hover:underline">Cart</span>
-            </Link>
-            <Link href="/user/mainpage/natural-bites/about">
-              <span className="text-white hover:underline">About</span>
             </Link>
           </div>
 
@@ -112,47 +110,40 @@ const Navbar = () => {
                 Cart
               </span>
             </Link>
-            <Link href="/user/mainpage/natural-bites/about">
-              <span
-                className="text-white hover:underline"
-                onClick={() => setMenuOpen(false)}
-              >
-                About
-              </span>
-            </Link>
           </nav>
         )}
       </header>
 
       {/* Bottom Navbar with Icons */}
-<nav className="fixed bottom-0 left-0 w-full bg-green-600 text-white shadow-md z-50">
-  <div className="flex justify-around items-center h-16">
-    <Link href="/user/mainpage/natural-bites">
-      <span className="text-white flex flex-col items-center hover:bg-green-700 py-2 px-4">
-        <i className="fas fa-home text-lg"></i>
-        <span className="block text-sm">Home</span>
-      </span>
-    </Link>
-    <Link href="/user/mainpage/natural-bites/products">
-      <span className="text-white flex flex-col items-center hover:bg-green-700 py-2 px-4">
-        <i className="fas fa-box text-lg"></i>
-        <span className="block text-sm">Products</span>
-      </span>
-    </Link>
-    <Link href="/user/mainpage/natural-bites/cartpage">
-      <span className="text-white flex flex-col items-center hover:bg-green-700 py-2 px-4">
-        <i className="fas fa-shopping-cart text-lg"></i>
-        <span className="block text-sm">Cart</span>
-      </span>
-    </Link>
-    <Link href="/user/mainpage/natural-bites/about">
-      <span className="text-white flex flex-col items-center hover:bg-green-700 py-2 px-4">
-        <i className="fas fa-info-circle text-lg"></i>
-        <span className="block text-sm">About</span>
-      </span>
-    </Link>
-  </div>
-</nav>
+      <nav className="fixed bottom-0 left-0 w-full bg-green-600 text-white shadow-md z-50">
+        <div className="flex justify-around items-center h-16">
+          <Link href="/user/mainpage/natural-bites">
+            <span className="text-white flex flex-col items-center hover:bg-green-700 py-2 px-4">
+              <i className="fas fa-home text-lg"></i>
+              <span className="block text-sm">Home</span>
+            </span>
+          </Link>
+          <Link href="/user/mainpage/natural-bites/product">
+            <span className="text-white flex flex-col items-center hover:bg-green-700 py-2 px-4">
+              <i className="fas fa-box text-lg"></i>
+              <span className="block text-sm">Products</span>
+            </span>
+          </Link>
+          <Link href="/user/mainpage/natural-bites/cartpage">
+            <span className="text-white flex flex-col items-center hover:bg-green-700 py-2 px-4">
+              <i className="fas fa-shopping-cart text-lg"></i>
+              <span className="block text-sm">Cart</span>
+            </span>
+          </Link>
+          <button
+            onClick={() => router.back()}
+            className="text-white flex flex-col items-center hover:bg-green-700 py-2 px-4"
+          >
+            <i className="fas fa-arrow-left text-lg"></i>
+            <span className="block text-sm">Back</span>
+          </button>
+        </div>
+      </nav>
     </div>
   );
 };

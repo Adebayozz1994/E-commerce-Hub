@@ -120,7 +120,7 @@ const MainPage: React.FC = () => {
         )}
       </nav>
 
-      <div className="flex flex-col items-center justify-center px-6 py-12">
+      <div className="flex flex-col items-center justify-center px-6 py-12 mb-16">
         <h1 className="text-4xl md:text-6xl font-bold text-white text-center mb-12">
           Explore Our E-Commerce Sites
         </h1>
