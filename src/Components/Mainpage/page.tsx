@@ -1,8 +1,9 @@
 'use client';
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Link from "next/link";
 
 const MainPage: React.FC = () => {
+  const [isLoading, setIsLoading] = useState(true); // State to manage loader visibility
   const [menuOpen, setMenuOpen] = useState(false);
 
   const ecomSites = [
@@ -14,6 +15,23 @@ const MainPage: React.FC = () => {
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
   };
+
+  // Simulate a loading delay
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsLoading(false); // Hide the loader after 2 seconds
+    }, 3000);
+    return () => clearTimeout(timer); // Cleanup timer on component unmount
+  }, []);
+
+  // Loader component
+  if (isLoading) {
+    return (
+      <div className="flex justify-center items-center h-screen bg-white">
+        <div className="loader"></div>
+      </div>
+    );
+  }
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-indigo-500 via-purple-600 to-pink-500">
@@ -122,27 +140,27 @@ const MainPage: React.FC = () => {
       </div>
 
       <nav className="fixed bottom-0 left-0 w-full bg-white shadow-lg">
-  <div className="flex justify-around py-3">
-    <Link href="/">
-      <div className="text-indigo-600 flex flex-col items-center hover:bg-gray-200 py-2 px-4 rounded-md transition-all duration-300">
-        <i className="fas fa-home text-xl mb-1"></i>
-        <span className="text-sm">Home</span>
-      </div>
-    </Link>
-    <Link href="/">
-      <div className="text-indigo-600 flex flex-col items-center hover:bg-gray-200 py-2 px-4 rounded-md transition-all duration-300">
-        <i className="fas fa-info-circle text-xl mb-1"></i>
-        <span className="text-sm">About</span>
-      </div>
-    </Link>
-    <Link href="/">
-      <div className="text-indigo-600 flex flex-col items-center hover:bg-gray-200 py-2 px-4 rounded-md transition-all duration-300">
-        <i className="fas fa-phone text-xl mb-1"></i>
-        <span className="text-sm">Contact</span>
-      </div>
-    </Link>
-  </div>
-</nav>
+        <div className="flex justify-around py-3">
+          <Link href="/">
+            <div className="text-indigo-600 flex flex-col items-center hover:bg-gray-200 py-2 px-4 rounded-md transition-all duration-300">
+              <i className="fas fa-home text-xl mb-1"></i>
+              <span className="text-sm">Home</span>
+            </div>
+          </Link>
+          <Link href="/">
+            <div className="text-indigo-600 flex flex-col items-center hover:bg-gray-200 py-2 px-4 rounded-md transition-all duration-300">
+              <i className="fas fa-info-circle text-xl mb-1"></i>
+              <span className="text-sm">About</span>
+            </div>
+          </Link>
+          <Link href="/">
+            <div className="text-indigo-600 flex flex-col items-center hover:bg-gray-200 py-2 px-4 rounded-md transition-all duration-300">
+              <i className="fas fa-phone text-xl mb-1"></i>
+              <span className="text-sm">Contact</span>
+            </div>
+          </Link>
+        </div>
+      </nav>
     </div>
   );
 };
