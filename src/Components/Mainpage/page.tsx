@@ -1,10 +1,10 @@
 'use client';
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
-import { motion } from "framer-motion"; // Import motion for animations
+import { motion } from "framer-motion";
 
 const MainPage: React.FC = () => {
-  const [isLoading, setIsLoading] = useState(true); // State to manage loader visibility
+  const [isLoading, setIsLoading] = useState(true); 
   const [menuOpen, setMenuOpen] = useState(false);
 
   const ecomSites = [
@@ -20,9 +20,9 @@ const MainPage: React.FC = () => {
   // Simulate a loading delay
   useEffect(() => {
     const timer = setTimeout(() => {
-      setIsLoading(false); // Hide the loader after 2 seconds
+      setIsLoading(false); 
     }, 3000);
-    return () => clearTimeout(timer); // Cleanup timer on component unmount
+    return () => clearTimeout(timer); 
   }, []);
 
   // Loader component

@@ -1,13 +1,13 @@
 'use client';
 import { useState, useEffect } from "react";
 import Link from "next/link";
-import { useRouter } from "next/navigation"; // Import useRouter
+import { useRouter } from "next/navigation"; 
 import Style from "../Bites/Bites.module.css";
 
 const Bites = () => {
   const [menuOpen, setMenuOpen] = useState<boolean>(false);
-  const [loading, setLoading] = useState<boolean>(true); // State to handle loading
-  const router = useRouter(); // Initialize useRouter
+  const [loading, setLoading] = useState<boolean>(true); 
+  const router = useRouter(); 
 
   // Toggle the mobile menu
   const toggleMenu = () => {
@@ -17,10 +17,10 @@ const Bites = () => {
   // Simulate loading state
   useEffect(() => {
     const timer = setTimeout(() => {
-      setLoading(false); // Set loading to false after 2 seconds (simulate data fetching)
-    }, 2000); // Adjust time as needed
+      setLoading(false); 
+    }, 2000);
 
-    return () => clearTimeout(timer); // Cleanup on component unmount
+    return () => clearTimeout(timer);
   }, []);
 
   if (loading) {
@@ -149,7 +149,7 @@ const Bites = () => {
           </Link>
           <button
             className="text-white flex flex-col items-center hover:bg-blue-700 py-2 px-4"
-            onClick={() => router.back()} // Go back to the previous page
+            onClick={() => router.back()} 
           >
             <i className="fas fa-arrow-left text-lg"></i>
             <span className="block text-sm">Back</span>

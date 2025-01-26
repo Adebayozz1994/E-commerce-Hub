@@ -17,7 +17,7 @@ const About = () => {
       } else {
         clearInterval(typingEffect);
       }
-    }, 100); // Adjust typing speed here (100ms per character)
+    }, 100);
 
     return () => clearInterval(typingEffect);
   }, []);
@@ -27,7 +27,7 @@ const About = () => {
       {/* Hero Section */}
       <div className="relative w-full h-[400px] bg-gradient-to-r from-blue-800 via-indigo-800 to-purple-900 flex items-center justify-center overflow-hidden">
         <Image
-          src="/images/back.png" // Replace with your image path
+          src="/images/back.png" 
           alt="Developer"
           fill
           priority

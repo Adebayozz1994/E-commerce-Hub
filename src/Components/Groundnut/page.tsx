@@ -1,13 +1,13 @@
 "use client";
 import { useEffect, useState } from "react";
 import Link from "next/link";
-import { useRouter } from "next/navigation"; // Import useRouter
+import { useRouter } from "next/navigation"; 
 import Groundnut from "../Groundnut/Groundnut.module.css";
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState<boolean>(false);
   const [loading, setLoading] = useState<boolean>(true);
-  const router = useRouter(); // Initialize the router
+  const router = useRouter(); 
 
   // Toggle the mobile menu
   const toggleMenu = () => {
@@ -17,10 +17,10 @@ const Navbar = () => {
   // Simulate loading state
   useEffect(() => {
     const timer = setTimeout(() => {
-      setLoading(false); // Set loading to false after 2 seconds (simulate data fetching)
-    }, 2000); // Adjust time as needed
+      setLoading(false); 
+    }, 2000);
 
-    return () => clearTimeout(timer); // Cleanup on component unmount
+    return () => clearTimeout(timer);
   }, []);
 
   if (loading) {

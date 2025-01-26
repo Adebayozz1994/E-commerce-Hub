@@ -2,7 +2,7 @@
 import { useCart } from '@/Components/Groundnut/Cartcontext/page';
 import Image from 'next/image';
 import Link from 'next/link';
-import { useRouter } from "next/navigation"; // Import useRouter
+import { useRouter } from "next/navigation";
 
 const products = [
   {
@@ -29,10 +29,9 @@ const products = [
 ];
 
 const Product = () => {
-   const router = useRouter(); // Initialize the router
+   const router = useRouter(); 
   const { addToCart, cartItems } = useCart();
 
-  // Calculate total quantity of items in the cart
   const totalItems = cartItems.reduce((sum, item) => sum + item.quantity, 0);
 
   return (
