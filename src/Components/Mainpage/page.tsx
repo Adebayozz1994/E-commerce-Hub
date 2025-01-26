@@ -11,6 +11,7 @@ const MainPage: React.FC = () => {
     { id: 1, name: "Natural-Bites Store", description: "Explore the beautifull and healthy Groundnut", link: "mainpage/natural-bites" },
     { id: 2, name: "ORAJ Edibbles", description: "Your trusted brand for quality and hygenic food items.", link: "mainpage/oraj-edibles" },
     { id: 3, name: "Opeyemi Couture", description: "Get the best style with us in fashion and tailoring material.", link: "mainpage/opeyemi-couture" },
+    { id: 4, name: "Chrisia Lure Scents", description: "A brand thats help people boost their confidence and stand out through fashion accessories, body and home frangrance.", link: "mainpage/chrisia-lure-scents" },
   ];
 
   const toggleMenu = () => {
