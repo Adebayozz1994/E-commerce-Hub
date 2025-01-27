@@ -128,7 +128,7 @@ export default function Home() {
           <div className="bg-white p-6 rounded-lg shadow-lg w-96">
             <h2 className="text-2xl font-bold mb-4">Contact Details</h2>
             <p className="text-lg mb-2">
-              <strong>Phone:</strong> <a href="https://wa.me/+2348166223968" className="text-blue-600">+2348166223968 (Click to Contact)</a>
+              <strong>Phone:</strong> <a href="https://wa.me/+2349033787360" className="text-blue-600">+2348166223968 (Click to Contact)</a>
             </p>
             <p className="text-lg mb-2">
               <strong>Address:</strong> R08 Katangua Street, Ogbomosho, Nigeria
