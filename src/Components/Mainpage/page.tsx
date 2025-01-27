@@ -8,10 +8,10 @@ const MainPage: React.FC = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
   const ecomSites = [
-    { id: 1, name: "Natural-Bites Store", description: "Explore the beautifull and healthy Groundnut", link: "mainpage/natural-bites" },
-    { id: 2, name: "ORAJ Edibbles", description: "Your trusted brand for quality and hygenic food items.", link: "mainpage/oraj-edibles" },
-    { id: 3, name: "Opeyemi Couture", description: "Get the best style with us in fashion and tailoring material.", link: "mainpage/opeyemi-couture" },
-    { id: 4, name: "Chrisia Lure Scents", description: "A brand thats help people boost their confidence and stand out through fashion accessories, body and home frangrance.", link: "mainpage/chrisia-lure-scents" },
+    { id: 1, name: "Natural-Bites Store", description: "Explore the beautifull and healthy Groundnut", link: "mainpage/natural-bites", isDisabled: true },
+    { id: 2, name: "ORAJ Edibbles", description: "Your trusted brand for quality and hygenic food items.", link: "mainpage/oraj-edibles", isDisabled: true }, 
+    { id: 3, name: "Opeyemi Couture", description: "Get the best style with us in fashion and tailoring material.", link: "mainpage/opeyemi-couture", isDisabled: false },
+    { id: 4, name: "Chrisia Lure Scents", description: "A brand thats help people boost their confidence and stand out through fashion accessories, body and home frangrance.", link: "mainpage/chrisia-lure-scents", isDisabled: true },
   ];
 
   const toggleMenu = () => {
@@ -139,20 +139,22 @@ const MainPage: React.FC = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 max-w-7xl w-full">
           {ecomSites.map((site) => (
-            <Link href={site.link} key={site.id}>
-              <motion.div
-                className="bg-white rounded-lg p-8 flex flex-col items-center justify-between shadow-inner hover:scale-105 transform transition duration-300 ease-in-out cursor-pointer h-72"
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.5, duration: 1 }}
-              >
-                <h2 className="text-3xl font-bold text-indigo-600 mb-4">{site.name}</h2>
-                <p className="text-gray-600 text-center mb-6 text-lg">{site.description}</p>
-                <div className="px-6 py-3 bg-indigo-500 text-white font-semibold rounded-lg shadow-md hover:bg-indigo-600 transition">
-                  Visit {site.name}
-                </div>
-              </motion.div>
-            </Link>
+            <div key={site.id}>
+              <Link href={site.isDisabled ? "#" : site.link}>
+                <motion.div
+                  className={`bg-white rounded-lg p-8 flex flex-col items-center justify-between shadow-inner hover:scale-105 transform transition duration-300 ease-in-out cursor-pointer h-72 ${site.isDisabled ? "opacity-50 cursor-not-allowed" : ""}`}
+                  initial={{ opacity: 0, y: 30 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.5, duration: 1 }}
+                >
+                  <h2 className="text-3xl font-bold text-indigo-600 mb-4">{site.name}</h2>
+                  <p className="text-gray-600 text-center mb-6 text-lg">{site.description}</p>
+                  <div className="px-6 py-3 bg-indigo-500 text-white font-semibold rounded-lg shadow-md hover:bg-indigo-600 transition">
+                    Visit {site.name}
+                  </div>
+                </motion.div>
+              </Link>
+            </div>
           ))}
         </div>
       </div>
