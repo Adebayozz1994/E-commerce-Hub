@@ -1,5 +1,5 @@
 'use client';
-import { useCart } from '@/Components/Groundnut/Cartcontext/page';
+import { useCart } from '@/Components/Chrisia/Cartcontext/page';
 
 const CartPage = () => {
   const { cartItems, updateQuantity, removeFromCart, getTotalPrice } = useCart();
@@ -56,7 +56,7 @@ const CartPage = () => {
         </div>
         <button
           onClick={handlePlaceOrder}
-          className="mt-4 w-full bg-blue-600 text-white py-2 rounded shadow hover:bg-green-700"
+          className="mt-4 w-full bg-[#970942] text-white py-2 rounded shadow hover:bg-[#780535]"
         >
           Place Order on WhatsApp
         </button>

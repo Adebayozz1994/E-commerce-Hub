@@ -29,23 +29,20 @@ const HomePage = () => {
   return (
     <>
       {/* Hero Section */}
-      <Christia/>
-      <section className="bg-blue-600 text-white py-20 relative overflow-hidden">
+      <Christia />
+      <section className="bg-[#970942] text-white py-20 relative overflow-hidden">
         <div className="container mx-auto flex flex-col md:flex-row items-center">
           <div className="text-center md:text-left md:w-1/2 ml-5">
-            <h1 className="text-4xl font-bold mb-4">Welcome to Oraj Edibles Store</h1>
+            <h1 className="text-4xl font-bold mb-4">Welcome to Christia-Lure-Scents</h1>
             <p className="text-lg mb-6">
-              Discover the finest selection of groundnuts. Order now and enjoy the taste of quality!
+            A brand thats help people boost their confidence and stand out through fashion accessories, body and home frangrance.
             </p>
-            {
-              <Link href="/user/mainpage/oraj-edibles/products">
-                <button className="bg-white text-blue-600 font-semibold px-6 py-3 rounded shadow hover:bg-gray-100 transition transform hover:scale-105">
-                  Shop Now
-                </button>
-              </Link>
-            }
+            <Link href="/user/mainpage/chrisia-lure-scents/products">
+              <button className="bg-white text-[#970942] font-semibold px-6 py-3 rounded shadow hover:bg-gray-100 transition transform hover:scale-105">
+                Shop Now
+              </button>
+            </Link>
           </div>
-
           <div className="mt-8 md:mt-0 md:w-1/3">
             <Image
               src="/images/back.png"
@@ -90,19 +87,17 @@ const HomePage = () => {
       </section>
 
       {/* Call to Action Section */}
-      <section className="bg-blue-600 text-white py-16">
+      <section className="bg-[#970942] text-white py-16">
         <div className="container mx-auto text-center">
           <h2 className="text-3xl font-bold mb-4">Ready to Taste Quality?</h2>
           <p className="text-lg mb-6">
             Place your order now and let us deliver the best groundnuts to your door.
           </p>
-          {
-            <Link href="/user/mainpage/oraj-edibles/contact">
-              <button className="bg-white text-blue-600 font-semibold px-6 py-3 rounded shadow hover:bg-white transition transform hover:scale-105">
-                Contact Us
-              </button>
-            </Link>
-          }
+          <Link href="/user/mainpage/chrisia-lure-scents/contact">
+            <button className="bg-white text-[#970942] font-semibold px-6 py-3 rounded shadow hover:bg-white transition transform hover:scale-105">
+              Contact Us
+            </button>
+          </Link>
         </div>
       </section>
 

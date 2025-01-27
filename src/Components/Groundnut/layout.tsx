@@ -1,17 +1,12 @@
-import React, { ReactNode } from "react";
-import "./globals.css";
-type LayoutProps = {
-  children: ReactNode;
-};
+import { CartProvider } from '@/Components/Groundnut/Cartcontext/page';
+import { ReactNode } from 'react';
 
-const Layout: React.FC<LayoutProps> = ({ children }) => {
+export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en">
       <body>
-        {children}
+        <CartProvider>{children}</CartProvider>
       </body>
     </html>
   );
-};
-
-export default Layout;
+}

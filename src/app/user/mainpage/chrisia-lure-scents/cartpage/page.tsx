@@ -1,10 +1,11 @@
 
+import CartPage from '@/Components/Chrisia/Cartpage/page'
 import React from 'react'
 
 const page = () => {
   return (
     <div>
-        page
+        <CartPage/>
     </div>
   )
 }

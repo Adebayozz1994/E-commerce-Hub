@@ -1,5 +1,5 @@
 'use client';
-import { useCart } from '@/Components/Groundnut/Cartcontext/page';
+import { useCart } from '@/Components/Chrisia/Cartcontext/page';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useRouter } from "next/navigation";
@@ -29,18 +29,18 @@ const products = [
 ];
 
 const Product = () => {
-   const router = useRouter(); 
+  const router = useRouter(); 
   const { addToCart, cartItems } = useCart();
 
   const totalItems = cartItems.reduce((sum, item) => sum + item.quantity, 0);
 
   return (
     <>
-      <header className="bg-green-600 text-white py-4 shadow-md sticky top-0 z-50">
+      <header className="bg-[#970942] text-white py-4 shadow-md sticky top-0 z-50">
         <div className="container mx-auto flex justify-between items-center px-4">
           <h1 className="text-2xl font-bold">Our Products</h1>
-          <Link href="/user/mainpage/natural-bites/cartpage">
-            <button className="bg-white text-green-600 px-4 py-2 rounded shadow hover:bg-gray-100">
+          <Link href="/user/mainpage/chrisia-lure-scents/cartpage">
+            <button className="bg-white text-[#970942] px-4 py-2 rounded shadow hover:bg-gray-100">
               View Cart {totalItems > 0 && `(${totalItems})`}
             </button>
           </Link>
@@ -65,48 +65,48 @@ const Product = () => {
                 />
                 <h3 className="text-xl font-bold mb-2">{product.name}</h3>
                 <p className="text-gray-600 mb-2">{product.description}</p>
-                <p className="text-green-600 font-bold mb-4">₦{product.price}</p>
+                <p className="text-[#970942] font-bold mb-4">₦{product.price}</p>
                 <button
                   onClick={() =>
                     addToCart({ id: product.id, name: product.name, price: product.price, quantity: 1 })
                   }
-                  className="bg-green-600 text-white px-4 py-2 rounded shadow hover:bg-green-700"
+                  className="bg-[#970942] text-white px-4 py-2 rounded shadow hover:bg-[#87083a]"
                 >
                   Add to Cart
                 </button>
               </div>
             ))}
           </div>
-           {/* Bottom Navbar with Icons */}
-      <nav className="fixed bottom-0 left-0 w-full bg-green-600 text-white shadow-md z-50">
-        <div className="flex justify-around items-center h-16">
-          <Link href="/user/mainpage/natural-bites">
-            <span className="text-white flex flex-col items-center hover:bg-green-700 py-2 px-4">
-              <i className="fas fa-home text-lg"></i>
-              <span className="block text-sm">Home</span>
-            </span>
-          </Link>
-          <Link href="/user/mainpage/natural-bites/product">
-            <span className="text-white flex flex-col items-center hover:bg-green-700 py-2 px-4">
-              <i className="fas fa-box text-lg"></i>
-              <span className="block text-sm">Products</span>
-            </span>
-          </Link>
-          <Link href="/user/mainpage/natural-bites/cartpage">
-            <span className="text-white flex flex-col items-center hover:bg-green-700 py-2 px-4">
-              <i className="fas fa-shopping-cart text-lg"></i>
-              <span className="block text-sm">Cart</span>
-            </span>
-          </Link>
-          <button
-            onClick={() => router.back()}
-            className="text-white flex flex-col items-center hover:bg-green-700 py-2 px-4"
-          >
-            <i className="fas fa-arrow-left text-lg"></i>
-            <span className="block text-sm">Back</span>
-          </button>
-        </div>
-      </nav>
+          {/* Bottom Navbar with Icons */}
+          <nav className="fixed bottom-0 left-0 w-full bg-[#970942] text-white shadow-md z-50">
+            <div className="flex justify-around items-center h-16">
+              <Link href="/user/mainpage/chrisia-lure-scents">
+                <span className="text-white flex flex-col items-center hover:bg-[#87083a] py-2 px-4">
+                  <i className="fas fa-home text-lg"></i>
+                  <span className="block text-sm">Home</span>
+                </span>
+              </Link>
+              <Link href="/user/mainpage/chrisia-lure-scents/product">
+                <span className="text-white flex flex-col items-center hover:bg-[#87083a] py-2 px-4">
+                  <i className="fas fa-box text-lg"></i>
+                  <span className="block text-sm">Products</span>
+                </span>
+              </Link>
+              <Link href="/user/mainpage/chrisia-lure-scents/cartpage">
+                <span className="text-white flex flex-col items-center hover:bg-[#87083a] py-2 px-4">
+                  <i className="fas fa-shopping-cart text-lg"></i>
+                  <span className="block text-sm">Cart</span>
+                </span>
+              </Link>
+              <button
+                onClick={() => router.back()}
+                className="text-white flex flex-col items-center hover:bg-[#87083a] py-2 px-4"
+              >
+                <i className="fas fa-arrow-left text-lg"></i>
+                <span className="block text-sm">Back</span>
+              </button>
+            </div>
+          </nav>
         </div>
       </section>
     </>

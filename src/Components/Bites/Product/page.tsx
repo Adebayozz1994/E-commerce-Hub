@@ -1,5 +1,5 @@
 'use client';
-import { useCart } from '@/Components/Groundnut/Cartcontext/page';
+import { useCart } from '@/Components/Bites/Cartcontext/page';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useRouter } from "next/navigation"; 
