@@ -1,116 +1,145 @@
-'use client';
-import Image from 'next/image';
-import Navbar from '../page';
-import Link from 'next/link';
+"use client";
+import Image from "next/image";
+import Navbar from "../page";
+import Link from "next/link";
 
 const HomePage = () => {
-  // Testimonial data
   const testimonials = [
     {
       name: "funmilola",
-      feedback: "The groundnuts are of exceptional quality and delivered on time!",
+      feedback:
+        "The groundnuts are of exceptional quality and delivered on time!",
       location: "Lagos, Nigeria",
-      image: "https://img.freepik.com/free-photo/peanuts-shells-wood_1150-18413.jpg?uid=R147290862&ga=GA1.1.1457401061.1705098422&semt=ais_hybrid"
+      image:
+        "https://img.freepik.com/free-photo/peanuts-shells-wood_1150-18413.jpg?uid=R147290862&ga=GA1.1.1457401061.1705098422&semt=ais_hybrid",
     },
     {
       name: "wuraola",
-      feedback: "Excellent customer service and fresh products. Highly recommended!",
+      feedback:
+        "Excellent customer service and fresh products. Highly recommended!",
       location: "Ibadan, Nigeria",
-      image: "https://img.freepik.com/free-photo/groundnuts-heart-shape-plate-put-sack-groundnuts_1150-34403.jpg?uid=R147290862&ga=GA1.1.1457401061.1705098422&semt=ais_hybrid"
+      image:
+        "https://img.freepik.com/free-photo/groundnuts-heart-shape-plate-put-sack-groundnuts_1150-34403.jpg?uid=R147290862&ga=GA1.1.1457401061.1705098422&semt=ais_hybrid",
     },
     {
       name: "ojo toyeshe",
-      feedback: "I was impressed with the fast delivery and organic taste. Will buy again!",
+      feedback:
+        "I was impressed with the fast delivery and organic taste. Will buy again!",
       location: "Abeokuta, Nigeria",
-      image: "https://img.freepik.com/free-photo/peanuts_1308-39977.jpg?uid=R147290862&ga=GA1.1.1457401061.1705098422&semt=ais_hybrid"
-    }
+      image:
+        "https://img.freepik.com/free-photo/peanuts_1308-39977.jpg?uid=R147290862&ga=GA1.1.1457401061.1705098422&semt=ais_hybrid",
+    },
   ];
 
   return (
     <>
-      {/* Hero Section */}
-      <Navbar/>
-      <section className="bg-green-600 text-white py-20 relative overflow-hidden">
-        <div className="container mx-auto flex flex-col md:flex-row items-center">
-          <div className="text-center md:text-left md:w-1/2 ml-5">
-            <h1 className="text-4xl font-bold mb-4">Welcome to The NUTural Bites</h1>
-            <p className="text-lg mb-6">
-              Discover the finest selection of groundnuts. Order now and enjoy the taste of quality!
-            </p>
-            {
+      {/* Navbar */}
+      <Navbar />
 
+      {/* Hero Section */}
+      <section className="bg-yellow-100 text-red-800 py-20 relative overflow-hidden">
+        <div className="container mx-auto flex flex-col md:flex-row items-center px-4">
+          {/* Hero Text */}
+          <div className="text-center md:text-left md:w-1/2 mb-8 md:mb-0">
+            <h1 className="text-4xl font-bold mb-4">
+              Welcome to The NUTural Bites
+            </h1>
+            <p className="text-lg mb-6">
+              Discover the finest selection of groundnuts. Order now and enjoy
+              the taste of quality!
+            </p>
             <Link href="/user/mainpage/natural-bites/product">
-            <button className="bg-white text-green-600 font-semibold px-6 py-3 rounded shadow hover:bg-gray-100 transition transform hover:scale-105">
-              Shop Now
-            </button>
+              <button className="bg-brown-600 text-white font-semibold px-6 py-3 rounded shadow hover:bg-brown-700 transition transform hover:scale-105">
+                Shop Now
+              </button>
             </Link>
-            }
           </div>
 
-          <div className="mt-8 md:mt-0 md:w-1/3">
+          {/* Hero Image */}
+          <div className="md:w-1/2 flex justify-center">
             <Image
-              src="https://res.cloudinary.com/dzaz4b8pw/image/upload/c_pad,w_500,h_450/v1738063694/IMG-20250110-WA0010-removebg-preview_1_b6ebmw.png"
+              src="https://res.cloudinary.com/dzaz4b8pw/image/upload/w_1000,ar_16:9,c_fill,g_auto,e_sharpen/v1738098311/IMG-20250128-WA0028-removebg-preview_kdiep1.png"
               alt="Groundnuts Hero"
               width={500}
               height={350}
-              className="rounded shadow-lg w-full h-auto transform hover:scale-105 transition duration-300"
+              className="w-full md:w-[500px] h-auto transform hover:scale-105 transition duration-300"
             />
           </div>
         </div>
       </section>
 
       {/* Why Choose Us Section */}
-      <section className="py-16 bg-gray-100">
-        <div className="container mx-auto">
-          <h2 className="text-3xl font-bold text-center mb-8">Why Choose Us?</h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {['Organic & Fresh', 'Fast Delivery', 'Customer Satisfaction'].map((title, idx) => (
-              <div
-                key={idx}
-                className="bg-white p-6 rounded shadow-md text-center transform hover:scale-105 transition duration-300"
-              >
-                <Image
-                  src="https://res.cloudinary.com/dzaz4b8pw/image/upload/w_1000,ar_1:1,c_fill,g_auto,e_art:hokusai/v1738062677/IMG-20250110-WA0010_cm8fzg.jpg"
-                  alt={title}
-                  width={200}
-                  height={200}
-                  className="mx-auto mb-4 w-full h-[200px] object-cover"
-                />
-                <h3 className="text-xl font-bold mb-2">{title}</h3>
-                <p>
-                  {title === "Organic & Fresh"
-                    ? "We source only the freshest and organically grown groundnuts for our customers."
-                    : title === "Fast Delivery"
-                    ? "Enjoy fast and reliable delivery services to your doorstep, anywhere in the region."
-                    : "Your satisfaction is our priority. We ensure top-notch quality in every order."}
-                </p>
-              </div>
-            ))}
+      <section className="py-16 bg-yellow-50">
+        <div className="container mx-auto flex flex-col md:flex-row items-center gap-8">
+          <div className="md:w-1/2">
+            <Image
+              src="https://res.cloudinary.com/dzaz4b8pw/image/upload/v1738098642/IMG-20250128-WA0021_ylojfh.jpg"
+              alt="Why Choose Us"
+              width={600}
+              height={400}
+              className="rounded shadow-lg object-cover transform hover:scale-105 transition duration-300"
+            />
+          </div>
+          <div className="md:w-1/2 text-center md:text-left">
+            <h2 className="text-3xl font-bold mb-4 text-red-800">Why Choose Us?</h2>
+            <p className="text-lg mb-6 text-red-800">
+              We deliver the highest quality groundnuts with unparalleled
+              customer service. From farm to your table, every bite is a taste
+              of nature.
+            </p>
+            <Link href="/user/mainpage/natural-bites/aboutus">
+              <button className="bg-brown-600 text-white font-semibold px-6 py-3 rounded shadow hover:bg-brown-700 transition transform hover:scale-105">
+                Learn More
+              </button>
+            </Link>
           </div>
         </div>
       </section>
 
+      {/* Featured Image Section */}
+      <section className="py-16 bg-yellow-100">
+        <div className="container mx-auto flex flex-col md:flex-row justify-center items-center gap-8">
+          <Image
+            src="https://res.cloudinary.com/dzaz4b8pw/image/upload/v1738100122/IMG-20250128-WA0040_f8xbtt.jpg"
+            alt="Featured Groundnuts 1"
+            width={400}
+            height={300}
+            className="rounded shadow-lg object-fit w-[500px] h-[500px] transform hover:scale-105 transition duration-300"
+          />
+          <Image
+            src="https://res.cloudinary.com/dzaz4b8pw/image/upload/v1738101052/IMG-20250128-WA0034_xbm0tc.jpg"
+            alt="Featured Groundnuts 2"
+            width={400}
+            height={300}
+            className="rounded shadow-lg object-cover w-[500px] h-[500px] transform hover:scale-105 transition duration-300"
+          />
+        </div>
+      </section>
+
       {/* Call to Action Section */}
-      <section className="bg-green-600 text-white py-16">
+      <section className="bg-yellow-50 text-red-800 py-16">
         <div className="container mx-auto text-center">
-          <h2 className="text-3xl font-bold mb-4">Ready to Taste Quality?</h2>
+          <h2 className="text-3xl font-bold mb-4">
+            Ready to Taste Quality?
+          </h2>
           <p className="text-lg mb-6">
-            Place your order now and let us deliver the best groundnuts to your door.
+            Place your order now and let us deliver the best groundnuts to your
+            door.
           </p>
-          {
-            <Link href="/user/mainpage/natural-bites/aboutus">
-          <button className="bg-white text-green-600 font-semibold px-6 py-3 rounded shadow hover:bg-gray-100 transition transform hover:scale-105">
-            Contact Us
-          </button>
-            </Link>
-          }
+          <Link href="/user/mainpage/natural-bites/aboutus">
+            <button className="bg-brown-600 text-red-800 font-semibold px-6 py-3 rounded shadow hover:bg-brown-700 transition transform hover:scale-105">
+              Contact Us
+            </button>
+          </Link>
         </div>
       </section>
 
       {/* Customer Reviews Section */}
-      <section className="py-16 bg-gray-100 mb-11">
+      <section className="py-16 bg-yellow-50">
         <div className="container mx-auto">
-          <h2 className="text-3xl font-bold text-center mb-8">What Our Customers Say</h2>
+          <h2 className="text-3xl font-bold text-center text-red-800 mb-8">
+            What Our Customers Say
+          </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {testimonials.map((testimonial, index) => (
               <div
@@ -126,9 +155,15 @@ const HomePage = () => {
                     className="w-16 h-16 rounded-full border border-gray-200"
                   />
                 </div>
-                <h3 className="text-lg font-bold mb-2">{testimonial.name}</h3>
-                <p className="italic text-gray-600 mb-4">{testimonial.feedback}</p>
-                <p className="text-sm text-gray-500">- {testimonial.location}</p>
+                <h3 className="text-lg font-bold text-red-800 mb-2">
+                  {testimonial.name}
+                </h3>
+                <p className="italic text-gray-600 mb-4">
+                  {testimonial.feedback}
+                </p>
+                <p className="text-sm text-gray-500">
+                  - {testimonial.location}
+                </p>
               </div>
             ))}
           </div>

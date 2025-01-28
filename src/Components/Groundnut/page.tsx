@@ -1,13 +1,13 @@
 "use client";
 import { useEffect, useState } from "react";
 import Link from "next/link";
-import { useRouter } from "next/navigation"; 
+import { useRouter } from "next/navigation";
 import Groundnut from "../Groundnut/Groundnut.module.css";
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState<boolean>(false);
   const [loading, setLoading] = useState<boolean>(true);
-  const router = useRouter(); 
+  const router = useRouter();
 
   // Toggle the mobile menu
   const toggleMenu = () => {
@@ -17,7 +17,7 @@ const Navbar = () => {
   // Simulate loading state
   useEffect(() => {
     const timer = setTimeout(() => {
-      setLoading(false); 
+      setLoading(false);
     }, 2000);
 
     return () => clearTimeout(timer);
@@ -35,26 +35,26 @@ const Navbar = () => {
   return (
     <div>
       {/* Header Section */}
-      <header className="bg-green-600 text-white py-4 shadow-md">
+      <header className="bg-[#8B4513] text-[#FFD700] py-4 shadow-md">
         <div className="container mx-auto flex justify-between items-center px-4">
           {/* Brand Name */}
           <Link href="/" passHref>
-            <h1 className="text-2xl sm:text-xl font-bold">NUTural Bites</h1>
+            <h1 className="text-2xl sm:text-xl font-bold text-yellow-500">NUTural Bites</h1>
           </Link>
 
           {/* Navigation Menu */}
           <div className="hidden md:flex space-x-4">
             <Link href="/user/mainpage">
-              <span className="text-white hover:underline">E-commerce Home</span>
+              <span className="hover:underline text-yellow-500">E-commerce Home</span>
             </Link>
             <Link href="/user/mainpage/natural-bites">
-              <span className="text-white hover:underline">Home</span>
+              <span className="hover:underline text-yellow-500ay-800">Home</span>
             </Link>
             <Link href="/user/mainpage/natural-bites/product">
-              <span className="text-white hover:underline">Products</span>
+              <span className="hover:underline text-yellow-500">Products</span>
             </Link>
             <Link href="/user/mainpage/natural-bites/cartpage">
-              <span className="text-white hover:underline">Cart</span>
+              <span className="hover:underline text-yellow-500">Cart</span>
             </Link>
           </div>
 
@@ -62,7 +62,7 @@ const Navbar = () => {
           <div className="md:hidden">
             <button
               onClick={toggleMenu}
-              className="focus:outline-none text-white"
+              className="focus:outline-none text-[#FFD700]"
               aria-label="Menu"
             >
               <svg
@@ -85,10 +85,10 @@ const Navbar = () => {
 
         {/* Mobile Navigation */}
         {menuOpen && (
-          <nav className="md:hidden bg-green-700 text-white flex flex-col items-center space-y-4 py-4">
+          <nav className="md:hidden bg-[#5C3A21] text-[#FFD700] flex flex-col items-center space-y-4 py-4">
             <Link href="/user/mainpage/">
               <span
-                className="text-white hover:underline"
+                className="hover:underline text-yellow-500"
                 onClick={() => setMenuOpen(false)}
               >
                 E-commerce Home
@@ -96,7 +96,7 @@ const Navbar = () => {
             </Link>
             <Link href="/user/mainpage/natural-bites/product">
               <span
-                className="text-white hover:underline"
+                className="hover:underline text-yellow-500"
                 onClick={() => setMenuOpen(false)}
               >
                 Products
@@ -104,7 +104,7 @@ const Navbar = () => {
             </Link>
             <Link href="/user/mainpage/natural-bites/cartpage">
               <span
-                className="text-white hover:underline"
+                className="hover:underline text-yellow-500"
                 onClick={() => setMenuOpen(false)}
               >
                 Cart
@@ -112,7 +112,7 @@ const Navbar = () => {
             </Link>
             <Link href="/user/mainpage/natural-bites/about">
               <span
-                className="text-white hover:underline"
+                className="hover:underline text-yellow-500"
                 onClick={() => setMenuOpen(false)}
               >
                 About
@@ -123,32 +123,32 @@ const Navbar = () => {
       </header>
 
       {/* Bottom Navbar with Icons */}
-      <nav className="fixed bottom-0 left-0 w-full bg-green-600 text-white shadow-md z-50">
+      <nav className="fixed bottom-0 left-0 w-full bg-[#8B4513] text-[#FFD700] shadow-md z-50">
         <div className="flex justify-around items-center h-16">
           <Link href="/user/mainpage">
-            <span className="text-white flex flex-col items-center hover:bg-green-700 py-2 px-4">
+            <span className="flex flex-col items-center hover:bg-[#5C3A21] py-2 px-4">
               <i className="fas fa-home text-lg"></i>
-              <span className="block text-sm">E-commerce Home</span>
+              <span className="block text-sm text-yellow-500">E-commerce Home</span>
             </span>
           </Link>
           <Link href="/user/mainpage/natural-bites/product">
-            <span className="text-white flex flex-col items-center hover:bg-green-700 py-2 px-4">
+            <span className="flex flex-col items-center hover:bg-[#5C3A21] py-2 px-4">
               <i className="fas fa-box text-lg"></i>
-              <span className="block text-sm">Products</span>
+              <span className="block text-sm text-yellow-500">Products</span>
             </span>
           </Link>
           <Link href="/user/mainpage/natural-bites/cartpage">
-            <span className="text-white flex flex-col items-center hover:bg-green-700 py-2 px-4">
+            <span className="flex flex-col items-center hover:bg-[#5C3A21] py-2 px-4">
               <i className="fas fa-shopping-cart text-lg"></i>
-              <span className="block text-sm">Cart</span>
+              <span className="block text-sm text-yellow-500">Cart</span>
             </span>
           </Link>
           <button
             onClick={() => router.back()}
-            className="text-white flex flex-col items-center hover:bg-green-700 py-2 px-4"
+            className="flex flex-col items-center hover:bg-[#5C3A21] py-2 px-4"
           >
             <i className="fas fa-arrow-left text-lg"></i>
-            <span className="block text-sm">Back</span>
+            <span className="block text-sm text-yellow-500">Back</span>
           </button>
         </div>
       </nav>
