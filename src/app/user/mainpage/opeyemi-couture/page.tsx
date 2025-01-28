@@ -15,7 +15,7 @@ export default function Home() {
   useEffect(() => {
     setTimeout(() => {
       setLoading(false);
-    }, 3000); // Adjust time based on your content loading time
+    }, 3000); 
   }, []);
 
   return (

@@ -7,22 +7,22 @@ const HomePage = () => {
   // Testimonial data
   const testimonials = [
     {
-      name: "funmilola",
+      name: "sunday",
       feedback: "The groundnuts are of exceptional quality and delivered on time!",
-      location: "Lagos, Nigeria",
-      image: "https://img.freepik.com/free-photo/peanuts-shells-wood_1150-18413.jpg?uid=R147290862&ga=GA1.1.1457401061.1705098422&semt=ais_hybrid"
+      location: "abia, Nigeria",
+      image: "https://res.cloudinary.com/dzaz4b8pw/image/upload/w_1000,ar_16:9,c_fill,g_auto,e_sharpen/v1738065286/IMG-20250127-WA0006-removebg_fe1fg8.png"
     },
     {
-      name: "wuraola",
+      name: "fatimah",
       feedback: "Excellent customer service and fresh products. Highly recommended!",
-      location: "Ibadan, Nigeria",
-      image: "https://img.freepik.com/free-photo/groundnuts-heart-shape-plate-put-sack-groundnuts_1150-34403.jpg?uid=R147290862&ga=GA1.1.1457401061.1705098422&semt=ais_hybrid"
+      location: "Ilorin, Nigeria",
+      image: "https://res.cloudinary.com/dzaz4b8pw/image/upload/w_1000,ar_16:9,c_fill,g_auto,e_sharpen/v1738065286/IMG-20250127-WA0006-removebg_fe1fg8.png"
     },
     {
-      name: "ojo toyeshe",
+      name: "abdul",
       feedback: "I was impressed with the fast delivery and organic taste. Will buy again!",
-      location: "Abeokuta, Nigeria",
-      image: "https://img.freepik.com/free-photo/peanuts_1308-39977.jpg?uid=R147290862&ga=GA1.1.1457401061.1705098422&semt=ais_hybrid"
+      location: "kano, Nigeria",
+      image: "https://res.cloudinary.com/dzaz4b8pw/image/upload/w_1000,ar_16:9,c_fill,g_auto,e_sharpen/v1738065286/IMG-20250127-WA0006-removebg_fe1fg8.png"
     }
   ];
 
@@ -45,7 +45,7 @@ const HomePage = () => {
           </div>
           <div className="mt-8 md:mt-0 md:w-1/3">
             <Image
-              src="/images/back.png"
+              src="https://res.cloudinary.com/dzaz4b8pw/image/upload/w_1000,ar_16:9,c_fill,g_auto,e_sharpen/v1738065286/IMG-20250127-WA0006-removebg_fe1fg8.png"
               alt="Groundnuts Hero"
               width={500}
               height={350}
@@ -60,13 +60,13 @@ const HomePage = () => {
         <div className="container mx-auto">
           <h2 className="text-3xl font-bold text-center mb-8">Why Choose Us?</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {['Organic & Fresh', 'Fast Delivery', 'Customer Satisfaction'].map((title, idx) => (
+            {['Quality and Classic', 'Fast Delivery', 'Customer Satisfaction'].map((title, idx) => (
               <div
                 key={idx}
                 className="bg-white p-6 rounded shadow-md text-center transform hover:scale-105 transition duration-300"
               >
                 <Image
-                  src="https://img.freepik.com/free-photo/peanuts-shells-wood_1150-18413.jpg?uid=R147290862&ga=GA1.1.1457401061.1705098422&semt=ais_hybrid"
+                  src="https://res.cloudinary.com/dzaz4b8pw/image/upload/w_1000,ar_16:9,c_fill,g_auto,e_sharpen/v1738065286/IMG-20250127-WA0006-removebg_fe1fg8.png"
                   alt={title}
                   width={200}
                   height={200}
@@ -74,8 +74,8 @@ const HomePage = () => {
                 />
                 <h3 className="text-xl font-bold mb-2">{title}</h3>
                 <p>
-                  {title === "Organic & Fresh"
-                    ? "We source only the freshest and organically grown groundnuts for our customers."
+                  {title === "Quality and Classic"
+                    ? "We source only the quality and classic for our customers."
                     : title === "Fast Delivery"
                     ? "Enjoy fast and reliable delivery services to your doorstep, anywhere in the region."
                     : "Your satisfaction is our priority. We ensure top-notch quality in every order."}

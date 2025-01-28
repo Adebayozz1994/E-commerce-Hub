@@ -7,24 +7,31 @@ import { useRouter } from "next/navigation";
 const products = [
   {
     id: 1,
-    name: 'Organic Groundnuts',
-    description: 'Freshly harvested organic groundnuts.',
+    name: 'TAPIOCA',
+    description: 'Smart choices, tasty results.',
     price: 1500,
-    image: 'https://img.freepik.com/free-photo/peanuts-shells-wood_1150-18413.jpg',
+    image: 'https://res.cloudinary.com/dzaz4b8pw/image/upload/w_1000,ar_1:1,c_fill,g_auto,e_art:hokusai/v1738061248/IMG-20250128-WA0007_c31ayw.jpg',
   },
   {
     id: 2,
-    name: 'Salted Groundnuts',
-    description: 'Deliciously roasted and salted groundnuts.',
+    name: 'BEAN-FLOUR',
+    description: 'Smart choices, tasty results.',
     price: 2000,
-    image: 'https://img.freepik.com/free-photo/groundnuts-heart-shape-plate-put-sack-groundnuts_1150-34403.jpg',
+    image: 'https://res.cloudinary.com/dzaz4b8pw/image/upload/w_1000,ar_1:1,c_fill,g_auto,e_art:hokusai/v1738061248/IMG-20250128-WA0005_lj7mkl.jpg',
   },
   {
     id: 3,
-    name: 'Honey Coated Groundnuts',
+    name: 'PUFF-PUFF MIX',
+    description: 'Smart choices, tasty results.',
+    price: 2500,
+    image: 'https://res.cloudinary.com/dzaz4b8pw/image/upload/w_1000,ar_1:1,c_fill,g_auto,e_art:hokusai/v1738061249/IMG-20250128-WA0003_binf2s.jpg',
+  },
+  {
+    id: 4,
+    name: 'kuli-kuli',
     description: 'Sweet and crunchy honey-coated groundnuts.',
     price: 2500,
-    image: 'https://img.freepik.com/free-photo/peanuts_1308-39977.jpg',
+    image: 'https://res.cloudinary.com/dzaz4b8pw/image/upload/w_1000,ar_1:1,c_fill,g_auto,e_art:hokusai/v1738061248/IMG-20250127-WA0023_iqhle2.jpg',
   },
 ];
 

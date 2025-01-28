@@ -7,21 +7,21 @@ const HomePage = () => {
   // Testimonial data
   const testimonials = [
     {
-      name: "funmilola",
+      name: "ade",
       feedback: "The groundnuts are of exceptional quality and delivered on time!",
-      location: "Lagos, Nigeria",
+      location: "kastina, Nigeria",
       image: "https://img.freepik.com/free-photo/peanuts-shells-wood_1150-18413.jpg?uid=R147290862&ga=GA1.1.1457401061.1705098422&semt=ais_hybrid"
     },
     {
-      name: "wuraola",
+      name: "Ebuka",
       feedback: "Excellent customer service and fresh products. Highly recommended!",
-      location: "Ibadan, Nigeria",
+      location: "oyo, Nigeria",
       image: "https://img.freepik.com/free-photo/groundnuts-heart-shape-plate-put-sack-groundnuts_1150-34403.jpg?uid=R147290862&ga=GA1.1.1457401061.1705098422&semt=ais_hybrid"
     },
     {
-      name: "ojo toyeshe",
+      name: "ogunjimi",
       feedback: "I was impressed with the fast delivery and organic taste. Will buy again!",
-      location: "Abeokuta, Nigeria",
+      location: "ofa, Nigeria",
       image: "https://img.freepik.com/free-photo/peanuts_1308-39977.jpg?uid=R147290862&ga=GA1.1.1457401061.1705098422&semt=ais_hybrid"
     }
   ];
@@ -48,7 +48,7 @@ const HomePage = () => {
 
           <div className="mt-8 md:mt-0 md:w-1/3">
             <Image
-              src="/images/back.png"
+              src="https://res.cloudinary.com/dzaz4b8pw/image/upload/c_pad,w_500,h_400/v1738064640/IMG-20250128-WA0007-removebg-preview_g6cea7.png"
               alt="Groundnuts Hero"
               width={500}
               height={350}
@@ -69,7 +69,7 @@ const HomePage = () => {
                 className="bg-white p-6 rounded shadow-md text-center transform hover:scale-105 transition duration-300"
               >
                 <Image
-                  src="https://img.freepik.com/free-photo/peanuts-shells-wood_1150-18413.jpg?uid=R147290862&ga=GA1.1.1457401061.1705098422&semt=ais_hybrid"
+                  src="https://res.cloudinary.com/dzaz4b8pw/image/upload/w_1000,ar_1:1,c_fill,g_auto,e_art:hokusai/v1738061248/IMG-20250128-WA0007_c31ayw.jpg"
                   alt={title}
                   width={200}
                   height={200}

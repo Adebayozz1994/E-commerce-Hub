@@ -49,7 +49,7 @@ const HomePage = () => {
 
           <div className="mt-8 md:mt-0 md:w-1/3">
             <Image
-              src="/images/back.png"
+              src="https://res.cloudinary.com/dzaz4b8pw/image/upload/c_pad,w_500,h_450/v1738063694/IMG-20250110-WA0010-removebg-preview_1_b6ebmw.png"
               alt="Groundnuts Hero"
               width={500}
               height={350}
@@ -70,7 +70,7 @@ const HomePage = () => {
                 className="bg-white p-6 rounded shadow-md text-center transform hover:scale-105 transition duration-300"
               >
                 <Image
-                  src="https://img.freepik.com/free-photo/peanuts-shells-wood_1150-18413.jpg?uid=R147290862&ga=GA1.1.1457401061.1705098422&semt=ais_hybrid"
+                  src="https://res.cloudinary.com/dzaz4b8pw/image/upload/w_1000,ar_1:1,c_fill,g_auto,e_art:hokusai/v1738062677/IMG-20250110-WA0010_cm8fzg.jpg"
                   alt={title}
                   width={200}
                   height={200}

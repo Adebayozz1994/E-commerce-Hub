@@ -8,23 +8,23 @@ const products = [
   {
     id: 1,
     name: 'Organic Groundnuts',
-    description: 'Freshly harvested organic groundnuts.',
+    description: 'Freshly harvested organic groundnuts. (35CL)',
     price: 1500,
-    image: 'https://img.freepik.com/free-photo/peanuts-shells-wood_1150-18413.jpg',
+    image: 'https://res.cloudinary.com/dzaz4b8pw/image/upload/w_1000,ar_1:1,c_fill,g_auto,e_art:hokusai/v1738061482/IMG-20250128-WA0010_papoya.jpg',
   },
   {
     id: 2,
     name: 'Salted Groundnuts',
-    description: 'Deliciously roasted and salted groundnuts.',
+    description: 'Deliciously roasted and salted groundnuts. (50CL)',
     price: 2000,
     image: 'https://img.freepik.com/free-photo/groundnuts-heart-shape-plate-put-sack-groundnuts_1150-34403.jpg',
   },
   {
     id: 3,
     name: 'Honey Coated Groundnuts',
-    description: 'Sweet and crunchy honey-coated groundnuts.',
+    description: 'Sweet and crunchy honey-coated groundnuts. (50CL with bottle)',
     price: 2500,
-    image: 'https://img.freepik.com/free-photo/peanuts_1308-39977.jpg',
+    image: 'https://res.cloudinary.com/dzaz4b8pw/image/upload/w_1000,ar_1:1,c_fill,g_auto,e_art:hokusai/v1738061481/IMG-20250128-WA0009_pdrkt8.jpg',
   },
 ];
 
