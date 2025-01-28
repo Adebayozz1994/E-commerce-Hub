@@ -56,7 +56,7 @@ const CartPage = () => {
         </div>
         <button
           onClick={handlePlaceOrder}
-          className="mt-4 w-full bg-green-600 text-white py-2 rounded shadow hover:bg-green-700"
+          className="mt-4 w-full bg-[#8B4513] text-white py-2 rounded shadow hover:bg-green-700"
         >
           Place Order on WhatsApp
         </button>
