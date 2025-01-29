@@ -8,7 +8,7 @@ const MainPage: React.FC = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
   const ecomSites = [
-    { id: 1, name: "NUTural Bites", description: "...Pure goodness of nuts.", link: "mainpage/natural-bites", isDisabled: false },
+    { id: 1, name: "NUTural Bites", description: "...Pure goodness of nuts.", link: "mainpage/natural-bites"},
     { id: 2, name: "ORAJ Edibbles", description: "Your trusted brand for quality and hygenic food items.", link: "mainpage/oraj-edibles", isDisabled: true }, 
     { id: 3, name: "Opeyemi Couture", description: "Get the best style with us in fashion and tailoring material.", link: "mainpage/opeyemi-couture", isDisabled: false },
     { id: 4, name: "Chrisia Lure Scents", description: "A brand thats help people boost their confidence and stand out through fashion accessories, body and home frangrance.", link: "mainpage/chrisia-lure-scents", isDisabled: true },
