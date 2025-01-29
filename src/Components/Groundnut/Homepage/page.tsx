@@ -33,11 +33,9 @@ const HomePage = () => {
 
   return (
     <>
-      {/* Navbar */}
+   <div>
       <Navbar />
-
-      {/* Hero Section */}
-      <section className="bg-yellow-100 text-red-800 py-20 relative overflow-hidden">
+      <section className="bg-yellow-100 text-red-800 py-20 overflow-hidden">
         <div className="container mx-auto flex flex-col md:flex-row items-center px-4">
           {/* Hero Text */}
           <div className="text-center md:text-left md:w-1/2 mb-8 md:mb-0">
@@ -49,14 +47,15 @@ const HomePage = () => {
               the taste of quality!
             </p>
             <Link href="/user/mainpage/natural-bites/product">
-              <button className="bg-brown-600 text-red-800 font-semibold px-6 py-3 rounded shadow hover:bg-brown-700 transition transform hover:scale-105">
-                Shop Now
-              </button>
-            </Link>
+  <button className="bg-brown-600 text-red-800 font-semibold px-6 py-3 rounded-full shadow border-2   hover:bg-yellow-900 hover:text-yellow-100 transition transform hover:scale-105">
+    Shop Now
+  </button>
+</Link>
+
           </div>
 
           {/* Hero Image */}
-          <div className="md:w-1/2 flex justify-center">
+          <div className="md:w-1/2 flex justify-center ">
             <Image
               src="https://res.cloudinary.com/dzaz4b8pw/image/upload/w_1000,ar_16:9,c_fill,g_auto,e_sharpen/v1738098311/IMG-20250128-WA0028-removebg-preview_kdiep1.png"
               alt="Groundnuts Hero"
@@ -127,7 +126,7 @@ const HomePage = () => {
             door.
           </p>
           <Link href="/user/mainpage/natural-bites/contact">
-            <button className="bg-brown-600 text-red-800 font-semibold px-6 py-3 rounded shadow hover:bg-brown-700 transition transform hover:scale-105">
+            <button className="bg-brown-600 text-red-800 font-semibold px-6 py-3 rounded-full shadow border-2   hover:bg-yellow-900 hover:text-yellow-100 transition transform hover:scale-105">
               Contact Us
             </button>
           </Link>
@@ -169,6 +168,7 @@ const HomePage = () => {
           </div>
         </div>
       </section>
+   </div>
     </>
   );
 };

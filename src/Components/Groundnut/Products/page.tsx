@@ -3,6 +3,7 @@ import { useCart } from '@/Components/Groundnut/Cartcontext/page';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useRouter } from "next/navigation";
+import { useEffect, useState } from 'react';
 
 const products = [
   {
@@ -31,12 +32,31 @@ const products = [
 const Product = () => {
    const router = useRouter(); 
   const { addToCart, cartItems } = useCart();
+   const [isSticky, setIsSticky] = useState<boolean>(false);
 
   const totalItems = cartItems.reduce((sum, item) => sum + item.quantity, 0);
 
+
+    // Add sticky effect on scroll
+    useEffect(() => {
+      const handleScroll = () => {
+        if (window.scrollY > 50) {
+          setIsSticky(true);
+        } else {
+          setIsSticky(false);
+        }
+      };
+  
+      window.addEventListener("scroll", handleScroll);
+      return () => {
+        window.removeEventListener("scroll", handleScroll);
+      };
+    }, []);
   return (
     <>
-      <header className="bg-[#8B4513] text-yellow-500 py-4 shadow-md sticky top-0 z-50">
+      <header className={`bg-yellow-100 text-yellow-900 py-4 shadow-lg shadow-yellow-900 transition-all duration-[600ms] ease-in-out ${
+          isSticky ? "fixed top-0 left-0 w-full z-50 bg-yellow-700 text-yellow-100" : "relative"
+        }`}>
         <div className="container mx-auto flex justify-between items-center px-4">
           <h1 className="text-2xl font-bold">Our Products</h1>
           <Link href="/user/mainpage/natural-bites/cartpage">
