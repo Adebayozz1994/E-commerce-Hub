@@ -5,42 +5,49 @@ import Navbar from '../page';
 const CartPage = () => {
   const { cartItems, updateQuantity, removeFromCart, getTotalPrice } = useCart();
 
-  // Generate WhatsApp order message in table format
+  // Generate WhatsApp order message in a readable format
   const handlePlaceOrder = () => {
     if (cartItems.length === 0) {
       alert('Your cart is empty!');
       return;
     }
 
-    const orderHeader = "*🛒 Order Summary:*%0A%0A";
-    const tableHeader = "*Item* | *Qty* | *Unit Price* | *Total*%0A";
-    const tableDivider = "----------------------------------%0A";
-    
-    const orderDetails = cartItems
-      .map((item) => `${item.name} | ${item.quantity} | ₦${item.price} | ₦${item.price * item.quantity}`)
-      .join("%0A");
+    const orderHeader = "*🛒 Order Summary:   ";
+    const tableHeader = `*Item*| *Qty* | *Unit Price* | *Total*%0A`;
+    const tableDivider = `-------------------------------------   `;
 
-    const totalPrice = `%0A*Total: ₦${getTotalPrice()}*`;
+    const orderDetails = cartItems
+      .map((item) => {
+        const itemName = item.name.padEnd(10, ' ');
+        const quantity = item.quantity.toString().padEnd(3, ' ');
+        const unitPrice = ` ₦${item.price}`.padEnd(10, ' ');
+        const total = ` ₦${item.price * item.quantity}`;
+
+        return `${itemName} | ${quantity} | ${unitPrice} | ${total}`;
+      })
+      .join("  ");
+
+    const totalPrice = `  Total: ₦${getTotalPrice()}*`;
     const encodedMessage = encodeURIComponent(
       `${orderHeader}${tableHeader}${tableDivider}${orderDetails}${totalPrice}`
     );
 
-    const whatsappNumber = '+2348064514572'; 
+    const whatsappNumber = '+2348064514572';
     const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
     window.open(whatsappUrl, '_blank');
   };
 
   return (
-    <div className="container mx-auto py-8">
-      <Navbar/>
-      <h1 className="text-2xl font-bold mb-4 text-red-800 mt-11">Your Cart</h1>
-      
-      <div className="bg-white shadow-md rounded p-6">
+    <div className="container mx-auto py-8 px-4">
+      <Navbar />
+      <h1 className="text-3xl font-bold mb-6 text-red-800 mt-11">Your Cart</h1>
+
+      <div className="bg-white shadow-md rounded-lg p-6">
         {cartItems.length > 0 ? (
           <table className="w-full border-collapse border border-gray-300">
             <thead>
-              <tr className="bg-yellow-200">
-                <th className="border border-gray-300 px-4 py-2 text-left text-red-800">Item</th>
+              <tr className="bg-yellow-200 text-left">
+                <th className="border border-gray-300 px-4 py-2 text-red-800">Item</th>
                 <th className="border border-gray-300 px-4 py-2 text-center text-red-800">Quantity</th>
                 <th className="border border-gray-300 px-4 py-2 text-center text-red-800">Unit Price</th>
                 <th className="border border-gray-300 px-4 py-2 text-center text-red-800">Total</th>
