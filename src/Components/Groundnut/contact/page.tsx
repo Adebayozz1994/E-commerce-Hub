@@ -7,7 +7,7 @@ const ContactPage = () => {
   return (
     <div>
         <Navbar/>
-      <div className="min-h-screen bg-yellow-300 flex flex-col items-center p-6">
+      <div className="min-h-screen bg-yellow-200 flex flex-col items-center p-6">
       <h1 className="text-3xl font-bold text-red-800 mb-4">Contact Us</h1>
       
       <div className="bg-white shadow-md rounded-lg p-6 w-full max-w-lg">

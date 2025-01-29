@@ -1,3 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Sankofa+Display&family=Sedgwick+Ave+Display&display=swap');
+
+.ade{
+  font-family: 'Sankofa Display', sans-serif;
+}
+
 .loader4 {
     width: fit-content;
     font-weight: bold;

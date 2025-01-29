@@ -12,6 +12,10 @@ export default {
         background: "var(--background)",
         foreground: "var(--foreground)",
       },
+      fontFamily: {
+        sankofa: ["'Sankofa Display'", "sans-serif"],
+        sedgwick: ["'Sedgwick Ave Display'", "cursive"],
+      },
     },
   },
   plugins: [],
