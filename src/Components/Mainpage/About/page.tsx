@@ -75,10 +75,6 @@ const About = () => {
         </h3>
         <ul className="text-gray-300 list-disc pl-6 mb-8">
           <li>
-            <strong>Portfolio Website:</strong> Designed and developed a
-            personal portfolio to showcase my skills and projects.
-          </li>
-          <li>
             <strong>E-Commerce App:</strong> Built a full-stack e-commerce
             platform with a responsive UI and secure backend.
           </li>
