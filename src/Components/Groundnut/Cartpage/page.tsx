@@ -1,5 +1,6 @@
 'use client';
 import { useCart } from '@/Components/Groundnut/Cartcontext/page';
+import Navbar from '../page';
 
 const CartPage = () => {
   const { cartItems, updateQuantity, removeFromCart, getTotalPrice } = useCart();
@@ -27,7 +28,8 @@ const CartPage = () => {
 
   return (
     <div className="container mx-auto py-8">
-      <h1 className="text-2xl font-bold mb-4">Your Cart</h1>
+      <Navbar/>
+      <h1 className="text-2xl font-bold mb-4 text-red-800 mt-11">Your Cart</h1>
       <div className="bg-white shadow-md rounded p-4">
         {cartItems.map((item) => (
           <div key={item.id} className="flex justify-between items-center mb-2">

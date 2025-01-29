@@ -49,7 +49,7 @@ const HomePage = () => {
               the taste of quality!
             </p>
             <Link href="/user/mainpage/natural-bites/product">
-              <button className="bg-brown-600 text-white font-semibold px-6 py-3 rounded shadow hover:bg-brown-700 transition transform hover:scale-105">
+              <button className="bg-brown-600 text-red-800 font-semibold px-6 py-3 rounded shadow hover:bg-brown-700 transition transform hover:scale-105">
                 Shop Now
               </button>
             </Link>
@@ -71,16 +71,7 @@ const HomePage = () => {
       {/* Why Choose Us Section */}
       <section className="py-16 bg-yellow-50">
         <div className="container mx-auto flex flex-col md:flex-row items-center gap-8">
-          <div className="md:w-1/2">
-            <Image
-              src="https://res.cloudinary.com/dzaz4b8pw/image/upload/v1738098642/IMG-20250128-WA0021_ylojfh.jpg"
-              alt="Why Choose Us"
-              width={600}
-              height={400}
-              className="rounded shadow-lg object-cover transform hover:scale-105 transition duration-300"
-            />
-          </div>
-          <div className="md:w-1/2 text-center md:text-left">
+          <div className="md:w-1/2 text-center md:text-left ml-6">
             <h2 className="text-3xl font-bold mb-4 text-red-800">Why Choose Us?</h2>
             <p className="text-lg mb-6 text-red-800">
               We deliver the highest quality groundnuts with unparalleled
@@ -92,6 +83,15 @@ const HomePage = () => {
                 Learn More
               </button>
             </Link>
+          </div>
+          <div className="md:w-1/2">
+            <Image
+              src="https://res.cloudinary.com/dzaz4b8pw/image/upload/v1738098642/IMG-20250128-WA0021_ylojfh.jpg"
+              alt="Why Choose Us"
+              width={600}
+              height={400}
+              className="rounded shadow-lg object-cover transform hover:scale-105 transition duration-300"
+            />
           </div>
         </div>
       </section>
@@ -107,7 +107,7 @@ const HomePage = () => {
             className="rounded shadow-lg object-fit w-[500px] h-[500px] transform hover:scale-105 transition duration-300"
           />
           <Image
-            src="https://res.cloudinary.com/dzaz4b8pw/image/upload/v1738101052/IMG-20250128-WA0034_xbm0tc.jpg"
+            src="https://res.cloudinary.com/dzaz4b8pw/image/upload/v1738142467/IMG-20250128-WA0020_q4wto1.jpg"
             alt="Featured Groundnuts 2"
             width={400}
             height={300}
@@ -126,7 +126,7 @@ const HomePage = () => {
             Place your order now and let us deliver the best groundnuts to your
             door.
           </p>
-          <Link href="/user/mainpage/natural-bites/aboutus">
+          <Link href="/user/mainpage/natural-bites/contact">
             <button className="bg-brown-600 text-red-800 font-semibold px-6 py-3 rounded shadow hover:bg-brown-700 transition transform hover:scale-105">
               Contact Us
             </button>

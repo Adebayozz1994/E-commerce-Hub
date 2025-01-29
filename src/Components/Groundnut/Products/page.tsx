@@ -7,24 +7,24 @@ import { useRouter } from "next/navigation";
 const products = [
   {
     id: 1,
-    name: 'Organic Groundnuts',
-    description: 'Freshly harvested organic groundnuts. (35CL)',
-    price: 1500,
-    image: 'https://res.cloudinary.com/dzaz4b8pw/image/upload/w_1000,ar_1:1,c_fill,g_auto,e_art:hokusai/v1738061482/IMG-20250128-WA0010_papoya.jpg',
+    name: 'Jar of Groundnuts',
+    description: 'Expertly roasted groundnuts perfect for parties, gatherings, or as a special treat for those who demand the best',
+    price: 2500,
+    image: 'https://res.cloudinary.com/dzaz4b8pw/image/upload/v1738142798/IMG-20250128-WA0023_cadmk7.jpg',
   },
   {
     id: 2,
-    name: 'Salted Groundnuts',
-    description: 'Deliciously roasted and salted groundnuts. (50CL)',
-    price: 2000,
-    image: 'https://img.freepik.com/free-photo/groundnuts-heart-shape-plate-put-sack-groundnuts_1150-34403.jpg',
+    name: '35cl bottle of roasted Groundnuts',
+    description: 'Our expertly roasted groundnuts in a 35cl bottle, perfect for on-the-go snacking or sharing with friends and family',
+    price: 1500,
+    image: 'https://res.cloudinary.com/dzaz4b8pw/image/upload/v1738142798/IMG-20250128-WA0027_dx0hsl.jpg',
   },
   {
     id: 3,
-    name: 'Honey Coated Groundnuts',
-    description: 'Sweet and crunchy honey-coated groundnuts. (50CL with bottle)',
-    price: 2500,
-    image: 'https://res.cloudinary.com/dzaz4b8pw/image/upload/w_1000,ar_1:1,c_fill,g_auto,e_art:hokusai/v1738061481/IMG-20250128-WA0009_pdrkt8.jpg',
+    name: '50cl bottle of roasted Groundnuts',
+    description: 'Indulge in more of our delicious roasted groundnuts with our 50cl bottle, perfect for parties, gatherings, or as a special treat for those who demand the best',
+    price: 2000,
+    image: 'https://res.cloudinary.com/dzaz4b8pw/image/upload/v1738142799/IMG-20250128-WA0025_xvgnsy.jpg',
   },
 ];
 
