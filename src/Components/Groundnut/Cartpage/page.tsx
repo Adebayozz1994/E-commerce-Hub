@@ -5,29 +5,23 @@ import Navbar from '../page';
 const CartPage = () => {
   const { cartItems, updateQuantity, removeFromCart, getTotalPrice } = useCart();
 
-  // Generate WhatsApp order message in a readable format
   const handlePlaceOrder = () => {
     if (cartItems.length === 0) {
       alert('Your cart is empty!');
       return;
     }
 
-    const orderHeader = "*🛒 Order Summary:   ";
-    const tableHeader = `*Item*| *Qty* | *Unit Price* | *Total*%0A`;
-    const tableDivider = `-------------------------------------   `;
+    const orderHeader = "*🛒 Order Summary:* \n";
+    const tableHeader = "*Item* | *Qty* | *Unit Price* | *Total* \n";
+    const tableDivider = "-------------------------------------\n";
 
     const orderDetails = cartItems
       .map((item) => {
-        const itemName = item.name.padEnd(10, ' ');
-        const quantity = item.quantity.toString().padEnd(3, ' ');
-        const unitPrice = ` ₦${item.price}`.padEnd(10, ' ');
-        const total = ` ₦${item.price * item.quantity}`;
-
-        return `${itemName} | ${quantity} | ${unitPrice} | ${total}`;
+        return `${item.name} | ${item.quantity} | ₦${item.price} | ₦${item.price * item.quantity}`;
       })
-      .join("  ");
+      .join("\n");
 
-    const totalPrice = `  Total: ₦${getTotalPrice()}*`;
+    const totalPrice = `\n*Total: ₦${getTotalPrice()}*`;
     const encodedMessage = encodeURIComponent(
       `${orderHeader}${tableHeader}${tableDivider}${orderDetails}${totalPrice}`
     );
@@ -40,31 +34,30 @@ const CartPage = () => {
   return (
     <div className="container mx-auto py-8 px-4">
       <Navbar />
-      <h1 className="text-3xl font-bold mb-6 text-red-800 mt-11">Your Cart</h1>
-
-      <div className="bg-white shadow-md rounded-lg p-6">
+      <h1 className="text-3xl font-bold mb-6 text-red-800 mt-11 text-center">Your Cart</h1>
+      <div className="bg-white shadow-md rounded-lg p-6 overflow-x-auto">
         {cartItems.length > 0 ? (
-          <table className="w-full border-collapse border border-gray-300">
+          <table className="w-full border border-gray-300 text-sm md:text-base">
             <thead>
               <tr className="bg-yellow-200 text-left">
-                <th className="border border-gray-300 px-4 py-2 text-red-800">Item</th>
-                <th className="border border-gray-300 px-4 py-2 text-center text-red-800">Quantity</th>
-                <th className="border border-gray-300 px-4 py-2 text-center text-red-800">Unit Price</th>
-                <th className="border border-gray-300 px-4 py-2 text-center text-red-800">Total</th>
-                <th className="border border-gray-300 px-4 py-2 text-center text-red-800">Action</th>
+                <th className="border border-gray-400 px-4 py-2 text-red-800">Item</th>
+                <th className="border border-gray-400 px-4 py-2 text-center text-red-800">Quantity</th>
+                <th className="border border-gray-400 px-4 py-2 text-center text-red-800">Unit Price</th>
+                <th className="border border-gray-400 px-4 py-2 text-center text-red-800">Total</th>
+                <th className="border border-gray-400 px-4 py-2 text-center text-red-800">Action</th>
               </tr>
             </thead>
             <tbody>
               {cartItems.map((item) => (
-                <tr key={item.id} className="border border-gray-300">
-                  <td className="border border-gray-300 px-4 py-2">{item.name}</td>
+                <tr key={item.id} className="border border-gray-300 bg-gray-50">
+                  <td className="border border-gray-300 px-4 py-2 text-center">{item.name}</td>
                   <td className="border border-gray-300 px-4 py-2 text-center">
                     <input
                       type="number"
                       min="1"
                       value={item.quantity}
                       onChange={(e) => updateQuantity(item.id, parseInt(e.target.value, 10))}
-                      className="w-16 p-1 border rounded text-center"
+                      className="w-16 p-1 border rounded text-center bg-white"
                     />
                   </td>
                   <td className="border border-gray-300 px-4 py-2 text-center">₦{item.price}</td>
@@ -72,7 +65,7 @@ const CartPage = () => {
                   <td className="border border-gray-300 px-4 py-2 text-center">
                     <button
                       onClick={() => removeFromCart(item.id)}
-                      className="text-red-500 hover:underline"
+                      className="text-red-600 hover:text-red-800 hover:underline"
                     >
                       Remove
                     </button>
@@ -87,13 +80,13 @@ const CartPage = () => {
 
         {cartItems.length > 0 && (
           <>
-            <div className="border-t mt-4 pt-4 flex justify-between font-bold text-red-800">
+            <div className="border-t mt-4 pt-4 flex justify-between font-bold text-red-800 text-lg">
               <span>Total:</span>
               <span>₦{getTotalPrice()}</span>
             </div>
             <button
               onClick={handlePlaceOrder}
-              className="mt-4 w-full bg-[#8B4513] text-white py-2 rounded shadow hover:bg-green-700 transition-transform transform hover:scale-105"
+              className="mt-4 w-full bg-[#8B4513] text-white py-2 rounded-lg shadow-lg hover:bg-green-700 transition-transform transform hover:scale-105"
             >
               Place Order on WhatsApp
             </button>

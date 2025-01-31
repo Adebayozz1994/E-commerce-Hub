@@ -1,11 +1,11 @@
-'use client';
-import React, { useState, useEffect } from 'react';
-import Image from 'next/image';
+"use client";
+import React, { useState, useEffect } from "react";
+import Image from "next/image";
 
 const About = () => {
-  const [text, setText] = useState('');
+  const [text, setText] = useState("");
   const fullText =
-    'A Passionate Software Developer Crafting Digital Experiences';
+    "A Passionate Software Developer Crafting Digital Experiences";
 
   useEffect(() => {
     let index = 0;
@@ -27,14 +27,16 @@ const About = () => {
       {/* Hero Section */}
       <div className="relative w-full h-[400px] bg-gradient-to-r from-blue-800 via-indigo-800 to-purple-900 flex items-center justify-center overflow-hidden">
         <Image
-          src="/images/back.png" 
+          src="/images/back.png"
           alt="Developer"
           fill
           priority
           className="object-cover object-center opacity-30"
         />
         <div className="absolute text-center z-10">
-          <h1 className="text-5xl md:text-6xl font-bold">Hi, I m Ogunlade Adebayo</h1>
+          <h1 className="text-5xl md:text-6xl font-bold">
+            Hi, I m Ogunlade Adebayo
+          </h1>
           <p className="mt-4 text-lg md:text-xl text-gray-300">
             {text}
             <span className="animate-blink">|</span>
@@ -48,10 +50,10 @@ const About = () => {
           About Me
         </h2>
         <p className="text-lg text-gray-300 leading-relaxed mb-8">
-          Hello! My name is Ogunlade Adebayo and I am a full-stack developer, a software developer with a passion for
-          building innovative solutions that make a difference. I specialize in
-          creating user-friendly web applications and bringing creative ideas
-          to life through code.
+          Hello! My name is Ogunlade Adebayo and I am a full-stack developer, a
+          software developer with a passion for building innovative solutions
+          that make a difference. I specialize in creating user-friendly web
+          applications and bringing creative ideas to life through code.
         </p>
 
         <h3 className="text-2xl font-semibold text-indigo-500 mb-4">
@@ -60,6 +62,9 @@ const About = () => {
         <p className="text-gray-300 mb-8">
           Bachelor of Technology in Chemistry - FUTMinna University (Graduated
           2019)
+        </p>
+        <p className="text-gray-300 mb-8">
+          SQI college of ICT - Full Stack Developer (2023 - Present)
         </p>
 
         <h3 className="text-2xl font-semibold text-indigo-500 mb-4">
@@ -77,6 +82,30 @@ const About = () => {
           <li>
             <strong>E-Commerce App:</strong> Built a full-stack e-commerce
             platform with a responsive UI and secure backend.
+          </li>
+          <li>
+            <strong>Banking Application:</strong> Developed a secure banking
+            system with features like account creation, deposits, withdrawals,
+            and transaction history tracking.
+          </li>
+          <li>
+            <strong>News Feed System:</strong> Created a blog-style news
+            platform with real-time updates, comments, and a like feature using
+            Vue and Laravel.
+          </li>
+          <li>
+            <strong>Portfolio Website:</strong> Designed and developed a
+            personal portfolio showcasing projects, skills, and a contact form.
+          </li>
+          <li>
+            <strong>Food Ordering App:</strong> Built a Next.js-based food
+            e-commerce site with cart functionality, checkout, and an intuitive
+            UI.
+          </li>
+          <li>
+            <strong>Admin Dashboard:</strong> Created a feature-rich admin panel
+            with user management, data visualization, and role-based
+            authentication.
           </li>
         </ul>
 
