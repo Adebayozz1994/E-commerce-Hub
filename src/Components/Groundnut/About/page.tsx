@@ -31,9 +31,9 @@ const About = () => {
       
       <div className="mt-6 flex flex-col md:flex-row gap-4 mb-20">
         <Image src="https://res.cloudinary.com/dzaz4b8pw/image/upload/v1738142803/IMG-20250128-WA0017_efjpm3.jpg" 
-               alt="Fresh Groundnuts" width={400} height={250} className="rounded-lg shadow-md" />
+               alt="Fresh Groundnuts" width={400} height={250} className="rounded-lg shadow-md"  unoptimized/>
         <Image src="https://res.cloudinary.com/dzaz4b8pw/image/upload/v1738101052/IMG-20250128-WA0034_xbm0tc.jpg" 
-               alt="Groundnut Processing" width={400} height={250} className="rounded-lg shadow-md" />
+               alt="Groundnut Processing" width={400} height={250} className="rounded-lg shadow-md"  unoptimized/>
       </div>
     </div>
 

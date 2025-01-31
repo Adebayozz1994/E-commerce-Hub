@@ -36,7 +36,6 @@ const Product = () => {
 
   const totalItems = cartItems.reduce((sum, item) => sum + item.quantity, 0);
 
-
     // Add sticky effect on scroll
     useEffect(() => {
       const handleScroll = () => {
@@ -54,7 +53,7 @@ const Product = () => {
     }, []);
   return (
     <>
-      <header   className={`bg-yellow-100 text-yellow-900 py-4 shadow-lg shadow-yellow-900 transition-all duration-[600ms] ease-in-out ${
+      <header className={`bg-yellow-100 text-yellow-900 py-4 shadow-lg shadow-yellow-900 transition-all duration-[600ms] ease-in-out ${
           isSticky ? "fixed top-0 left-0 w-full z-50 bg-green-100 text-white" : "relative"
         }`}>
         <div className="container mx-auto flex justify-between items-center px-4">
@@ -82,6 +81,7 @@ const Product = () => {
                   width={200}
                   height={200}
                   className="mx-auto mb-4 w-full h-[200px] object-cover"
+                  unoptimized
                 />
                 <h3 className="text-xl font-bold mb-2">{product.name}</h3>
                 <p className="text-gray-600 mb-2">{product.description}</p>
