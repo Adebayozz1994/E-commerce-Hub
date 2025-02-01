@@ -1,12 +1,13 @@
 import React from 'react';
 import Image from 'next/image';
-import Navbar from '../page';
+import Link from 'next/link';
+import { useRouter } from "next/navigation";
 
 
 const ContactPage = () => {
+  const router = useRouter(); 
   return (
     <div>
-        <Navbar/>
       <div className="min-h-screen bg-yellow-200 flex flex-col items-center p-6">
       <h1 className="text-3xl font-bold text-red-800 mb-4">Contact Us</h1>
       
@@ -35,6 +36,37 @@ const ContactPage = () => {
         <Image src="https://res.cloudinary.com/dzaz4b8pw/image/upload/w_1000,ar_1:1,c_fill,g_auto,e_art:hokusai/v1738142803/IMG-20250128-WA0017_efjpm3.jpg" alt="groundnut image" width={350} height={250} className="rounded-lg shadow-md" unoptimized/>
       </div>
     </div>
+
+      {/* Bottom Navbar with Icons */}
+      <nav className="fixed bottom-0 left-0 w-full bg-[#8B4513] text-yellow-500 shadow-md z-50">
+        <div className="flex justify-around items-center h-16">
+          <Link href="/user/mainpage/natural-bites">
+            <span className="text-yellow-500 flex flex-col items-center hover:bg-[#8B4513]/80 py-2 px-4">
+              <i className="fas fa-home text-lg"></i>
+              <span className="block text-sm">Home</span>
+            </span>
+          </Link>
+          <Link href="/user/mainpage/natural-bites/product">
+            <span className="text-yellow-500 flex flex-col items-center hover:bg-[#8B4513]/80 py-2 px-4">
+              <i className="fas fa-box text-lg"></i>
+              <span className="block text-sm">Products</span>
+            </span>
+          </Link>
+          <Link href="/user/mainpage/natural-bites/cartpage">
+            <span className="text-yellow-500 flex flex-col items-center hover:bg-[#8B4513]/80 py-2 px-4">
+              <i className="fas fa-shopping-cart text-lg"></i>
+              <span className="block text-sm">Cart</span>
+            </span>
+          </Link>
+          <button
+            onClick={() => router.back()}
+            className="text-yellow-500 flex flex-col items-center hover:bg-[#8B4513]/80 py-2 px-4"
+          >
+            <i className="fas fa-arrow-left text-lg"></i>
+            <span className="block text-sm">Back</span>
+          </button>
+        </div>
+      </nav>
     </div>
   );
 };

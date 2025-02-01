@@ -1,6 +1,5 @@
 'use client';
 import { useCart } from '@/Components/Groundnut/Cartcontext/page';
-// import Navbar from '../page';
 import Link from 'next/link';
 import { useRouter } from "next/navigation";
 
@@ -37,7 +36,6 @@ const CartPage = () => {
 
   return (
     <div className="container mx-auto py-8 px-4">
-      {/* <Navbar /> */}
       <h1 className="text-3xl font-bold mb-6 text-red-800 mt-11 text-center">Your Cart</h1>
       <div className="bg-white shadow-md rounded-lg p-6 overflow-x-auto">
         {cartItems.length > 0 ? (
