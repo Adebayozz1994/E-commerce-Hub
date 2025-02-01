@@ -1,10 +1,11 @@
-import type { NextConfig } from "next";
+import type { NextConfig } from 'next';
 
 const nextConfig: NextConfig = {
-  // output: 'export',
+  output: 'export',
   images: {
-    domains: ['img.freepik.com', 'res.cloudinary.com'], 
+    domains: ['img.freepik.com', 'res.cloudinary.com'],
   },
+  basePath: '/app',
 };
 
 export default nextConfig;

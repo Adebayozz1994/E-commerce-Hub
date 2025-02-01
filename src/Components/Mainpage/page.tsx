@@ -4,9 +4,9 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 
 const MainPage: React.FC = () => {
-  const [isLoading, setIsLoading] = useState(true); 
+  const [isLoading, setIsLoading] = useState(true);
   const [menuOpen, setMenuOpen] = useState(false);
-
+  
   const ecomSites = [
     { id: 1, name: "The NUTural Bites", description: "...Your favourite groundnut store.", link: "mainpage/natural-bites"},
     // { id: 2, name: "ORAJ Edibbles", description: "Your trusted brand for quality and hygenic food items.", link: "mainpage/oraj-edibles" }, 
@@ -22,9 +22,9 @@ const MainPage: React.FC = () => {
 
   useEffect(() => {
     const timer = setTimeout(() => {
-      setIsLoading(false); 
+      setIsLoading(false);
     }, 3000);
-    return () => clearTimeout(timer); 
+    return () => clearTimeout(timer);
   }, []);
 
   if (isLoading) {
@@ -54,6 +54,17 @@ const MainPage: React.FC = () => {
           </div>
         </div>
       </motion.nav>
+
+      {/* Mobile Menu (Toggle visibility) */}
+      {menuOpen && (
+        <div className="md:hidden bg-white shadow-lg">
+          <ul className="space-y-4 py-4 text-center">
+            <li><Link href="/" className="text-gray-700 font-semibold hover:text-indigo-600 text-lg">Home</Link></li>
+            <li><Link href="mainpage/about" className="text-gray-700 font-semibold hover:text-indigo-600 text-lg">About</Link></li>
+            <li><Link href="mainpage/contact" className="text-gray-700 font-semibold hover:text-indigo-600 text-lg">Contact</Link></li>
+          </ul>
+        </div>
+      )}
 
       <div className="flex flex-col items-center justify-center px-6 py-12 mb-16">
         <motion.h1 className="text-4xl md:text-6xl font-bold text-white text-center mb-12" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.5, duration: 1 }}>
