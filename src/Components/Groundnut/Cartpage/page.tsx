@@ -1,8 +1,12 @@
 'use client';
 import { useCart } from '@/Components/Groundnut/Cartcontext/page';
-import Navbar from '../page';
+// import Navbar from '../page';
+import Link from 'next/link';
+import { useRouter } from "next/navigation";
 
 const CartPage = () => {
+  const router = useRouter(); 
+
   const { cartItems, updateQuantity, removeFromCart, getTotalPrice } = useCart();
 
   const handlePlaceOrder = () => {
@@ -33,7 +37,7 @@ const CartPage = () => {
 
   return (
     <div className="container mx-auto py-8 px-4">
-      <Navbar />
+      {/* <Navbar /> */}
       <h1 className="text-3xl font-bold mb-6 text-red-800 mt-11 text-center">Your Cart</h1>
       <div className="bg-white shadow-md rounded-lg p-6 overflow-x-auto">
         {cartItems.length > 0 ? (
@@ -93,6 +97,37 @@ const CartPage = () => {
           </>
         )}
       </div>
+
+            {/* Bottom Navbar with Icons */}
+            <nav className="fixed bottom-0 left-0 w-full bg-[#8B4513] text-yellow-500 shadow-md z-50">
+        <div className="flex justify-around items-center h-16">
+          <Link href="/user/mainpage/natural-bites">
+            <span className="text-yellow-500 flex flex-col items-center hover:bg-[#8B4513]/80 py-2 px-4">
+              <i className="fas fa-home text-lg"></i>
+              <span className="block text-sm">Home</span>
+            </span>
+          </Link>
+          <Link href="/user/mainpage/natural-bites/product">
+            <span className="text-yellow-500 flex flex-col items-center hover:bg-[#8B4513]/80 py-2 px-4">
+              <i className="fas fa-box text-lg"></i>
+              <span className="block text-sm">Products</span>
+            </span>
+          </Link>
+          <Link href="/user/mainpage/natural-bites/cartpage">
+            <span className="text-yellow-500 flex flex-col items-center hover:bg-[#8B4513]/80 py-2 px-4">
+              <i className="fas fa-shopping-cart text-lg"></i>
+              <span className="block text-sm">Cart</span>
+            </span>
+          </Link>
+          <button
+            onClick={() => router.back()}
+            className="text-yellow-500 flex flex-col items-center hover:bg-[#8B4513]/80 py-2 px-4"
+          >
+            <i className="fas fa-arrow-left text-lg"></i>
+            <span className="block text-sm">Back</span>
+          </button>
+        </div>
+      </nav>
     </div>
   );
 };

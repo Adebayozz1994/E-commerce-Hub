@@ -31,8 +31,8 @@ const ContactPage = () => {
       </div>
 
       <div className="mt-6 grid grid-cols-1 md:grid-cols-2 gap-4 mb-11">
-        <Image src="https://res.cloudinary.com/dzaz4b8pw/image/upload/v1738101052/IMG-20250128-WA0034_xbm0tc.jpg" alt="logo" width={350} height={250} className="rounded-lg shadow-md" />
-        <Image src="https://res.cloudinary.com/dzaz4b8pw/image/upload/w_1000,ar_1:1,c_fill,g_auto,e_art:hokusai/v1738142803/IMG-20250128-WA0017_efjpm3.jpg" alt="groundnut image" width={350} height={250} className="rounded-lg shadow-md" />
+        <Image src="https://res.cloudinary.com/dzaz4b8pw/image/upload/v1738101052/IMG-20250128-WA0034_xbm0tc.jpg" alt="logo" width={350} height={250} className="rounded-lg shadow-md" unoptimized/>
+        <Image src="https://res.cloudinary.com/dzaz4b8pw/image/upload/w_1000,ar_1:1,c_fill,g_auto,e_art:hokusai/v1738142803/IMG-20250128-WA0017_efjpm3.jpg" alt="groundnut image" width={350} height={250} className="rounded-lg shadow-md" unoptimized/>
       </div>
     </div>
     </div>
