@@ -12,6 +12,8 @@ const MainPage: React.FC = () => {
     // { id: 2, name: "ORAJ Edibbles", description: "Your trusted brand for quality and hygenic food items.", link: "mainpage/oraj-edibles" }, 
     { id: 2, name: "Opeyemi Couture", description: "Get the best style with us in fashion and tailoring material.", link: "mainpage/opeyemi-couture" },
     // { id: 4, name: "Chrisia Lure Scents", description: "A brand thats help people boost their confidence and stand out through fashion accessories, body and home frangrance.", link: "mainpage/chrisia-lure-scents" },
+    { id: 3, name: "Weather App", description: "Check your city weather with ease.", link: "mainpage/weather" },
+    { id: 4, name: "Picture App", description: "Search for any pictures.", link: "mainpage/picturesearch" },
   ];
 
   const toggleMenu = () => {
