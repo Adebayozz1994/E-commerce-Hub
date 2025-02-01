@@ -13,8 +13,8 @@ export default {
         foreground: "var(--foreground)",
       },
       fontFamily: {
-        // sankofa: ["'Sankofa Display'", "sans-serif"],
-        // sedgwick: ["'Sedgwick Ave Display'", "cursive"],
+        sankofa: ["'Sankofa Display'", "sans-serif"],
+        sedgwick: ["'Sedgwick Ave Display'", "cursive"],
         playfair: ['Playfair Display', 'serif'],
       },
     },

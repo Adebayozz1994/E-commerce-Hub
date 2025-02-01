@@ -75,7 +75,7 @@ export default function ImageSearchApp() {
               download
               className="block text-center bg-blue-500 text-white py-2 mt-2 rounded-md hover:bg-blue-600 transition"
             >
-              Download
+              view
             </a>
           </div>
         ))}
