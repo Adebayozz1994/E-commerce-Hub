@@ -2,7 +2,6 @@
 
 import { useState, FormEvent } from "react";
 
-// Define TypeScript interface for Pixabay API response
 interface ImageData {
   id: number;
   webformatURL: string;
@@ -14,12 +13,17 @@ export default function ImageSearchApp() {
   const [query, setQuery] = useState<string>("");
   const [images, setImages] = useState<ImageData[]>([]);
   const [loading, setLoading] = useState<boolean>(false);
-  const API_KEY = "42766677-a60e8405a1f2deafc19e9c99a";
+  const API_KEY = process.env.NEXT_PUBLIC_PIXABAY_API_KEY;
 
   const searchImages = async (e: FormEvent) => {
     e.preventDefault();
     setLoading(true);
     setImages([]);
+
+    if (!API_KEY) {
+      console.error("API key is missing!");
+      return;
+    }
 
     try {
       const res = await fetch(
@@ -40,7 +44,6 @@ export default function ImageSearchApp() {
     <div className="min-h-screen bg-gray-100 flex flex-col items-center p-6">
       <h1 className="text-4xl font-bold text-gray-800 mb-6">Image Search App</h1>
 
-      {/* Search Bar */}
       <form onSubmit={searchImages} className="w-full max-w-md flex">
         <input
           type="text"
@@ -57,10 +60,8 @@ export default function ImageSearchApp() {
         </button>
       </form>
 
-      {/* Loading Indicator */}
       {loading && <p className="mt-4 text-lg text-gray-700">Loading...</p>}
 
-      {/* Image Grid */}
       <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mt-6">
         {images.map((image) => (
           <div key={image.id} className="bg-white shadow-lg rounded-lg p-2">
@@ -74,7 +75,7 @@ export default function ImageSearchApp() {
               download
               className="block text-center bg-blue-500 text-white py-2 mt-2 rounded-md hover:bg-blue-600 transition"
             >
-              view
+              Download
             </a>
           </div>
         ))}
